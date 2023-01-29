@@ -1,14 +1,27 @@
-<main>
-	<slot />
-</main>
+<script>
+  import '../lib/styles/styles.scss';
+	import { fade } from "svelte/transition";
+  import { onMount } from "svelte";
 
-<style lang="scss" global>
-	@use '../lib/styles/styles.scss';
+  let ready = false;
 
-  body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: darkblue;
-  }
-</style>
+  onMount(() => {
+    ready = true;
+  })
+
+  export let data;
+</script>
+
+<svelte:head>
+  <title>
+    August McAllister
+  </title>
+</svelte:head>
+
+{#key data.currentRoute}
+  <div in:fade={{ duration: 400 }} >
+    <main>
+      <slot />
+    </main>
+  </div>
+{/key}
