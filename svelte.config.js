@@ -6,9 +6,7 @@ const config = {
 	kit: {
 		adapter: adapter()
 	},
-  preprocess: [
-    sveltePreprocess(),
-  ]
+	preprocess: [sveltePreprocess()]
 };
 
 export default config;
