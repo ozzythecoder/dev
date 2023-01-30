@@ -31,7 +31,7 @@
 				</li>
 			{/each}
 		{:else}
-			<li>&nbsp;</li>
+			<li>‎</li>
 		{/if}
 	</ul>
 </nav>
@@ -40,6 +40,7 @@
 	ul {
 		display: flex;
 		flex-direction: row;
+    padding-left: 0;
 	}
 
 	li {
