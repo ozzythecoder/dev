@@ -12,7 +12,7 @@
 <div class="center-hero">
 	{#if ready}
 		<h1
-    in:fly={{ duration: 800, x: 500 }}
+    in:fly={{ duration: 800, x: 500, easing: circOut }}
     >hey, i'm august.</h1>
 	{:else}
   <!-- placeholder for heading -->
@@ -21,6 +21,22 @@
 
   <Nav />
 
+  {#if ready}
+    <div
+      class="down-arrow-container"
+      in:fade={{ delay: 2000, duration: 500 }} 
+    >
+    <span
+      class="down-arrow material-symbols-outlined"
+    >
+      expand_more
+    </span>
+    </div>
+  {:else}
+    <div>
+      ‎
+    </div>
+  {/if}
 </div>
 
 <style>
@@ -33,6 +49,27 @@
 		height: 100vh;
     outline: 1px white solid;
 	}
+
+  .down-arrow-container {
+    position: relative;
+    margin: 0 auto;
+    height: 2rem;
+  }
+  
+  .down-arrow {
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.5s;
+    transform: scale(1);
+    background: transparent;
+  }
+
+  .down-arrow:hover {
+    transform: scale(1.4);
+    background: rgb(255, 255, 255, 0.2);
+  }
 
   h1 {
     will-change: transform, opacity;
