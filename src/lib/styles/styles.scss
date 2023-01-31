@@ -1,13 +1,21 @@
-@use 'sass:map';
-@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&family=Gantari:wght@200;400;700&display=swap');
+// ==========================================================================
+// IMPORTS
 
-// =====================================
+// MAP
+@use 'sass:map';
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&family=Gantari:wght@200;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+
+// ==========================================================================
 // COLOR PALETTE
 
 $text-primary: #f5f5f5;
 $text-accent: #ffbc7c;
 
-// =====================================
+// ==========================================================================
 // RESPONSIVE FONT SIZES
 
 $title-font-sizes: (
@@ -31,7 +39,7 @@ $title-font-sizes: (
   }
 }
 
-// =====================================
+// ==========================================================================
 // GLOBAL STYLES
 
 body, h1, h2, p {

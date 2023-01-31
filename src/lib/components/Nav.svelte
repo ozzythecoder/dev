@@ -7,8 +7,7 @@
 		{
 			name: 'GitHub',
 			url: 'http://www.github.com/ozzythecoder/'
-		},
-		{
+		}, {
 			name: 'LinkedIn',
 			url: 'https://www.linkedin.com/in/august-mcallister/'
 		}, {
