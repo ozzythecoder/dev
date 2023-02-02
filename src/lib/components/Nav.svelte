@@ -26,7 +26,7 @@
 		{#if ready}
 			{#each links as link, idx}
 				<li in:fly={{ delay: 500 + idx * 500, duration: 800, x: 500, easing: circOut }}>
-					<a href={link.url}>{link.name}</a>
+					<a class="link" href={link.url}>{link.name}</a>
 				</li>
 			{/each}
 		{:else}
