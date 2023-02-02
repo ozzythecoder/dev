@@ -1,12 +1,13 @@
 <script>
   export let ready;
+  export let scrollTo;
 
   import { fade } from "svelte/transition";
 </script>
 
 {#if ready}
 	<div class="down-arrow-container" in:fade={{ delay: 2000, duration: 500 }}>
-		<a href="/#bottom-content">
+		<a href={`#${scrollTo}`}>
 			<span class="down-arrow material-symbols-outlined"> expand_more </span>
 		</a>
 	</div>
@@ -18,6 +19,7 @@
 	.down-arrow-container {
 		position: relative;
 		margin: 0 auto;
+    padding: 1rem;
 		height: 2rem;
 	}
 
@@ -37,5 +39,6 @@
 	.down-arrow:hover {
 		transform: scale(1.4);
 		background: rgb(255, 255, 255, 0.2);
+    border-radius: 6px;
 	}
 </style>

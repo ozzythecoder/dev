@@ -26,6 +26,21 @@ $title-font-sizes: (
   1440px: 96px
 );
 
+$h2-sizes: (
+  null: 38px,
+  480px: 44px,
+  760px: 50px,
+  1024px: 56px,
+  1440px: 60px
+);
+
+$p-sizes: (
+  null: 16px,
+  480px: 17px,
+  760px: 18px,
+  1440px: 20px
+);
+
 @mixin font-size($fs-map) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {
     @if $fs-breakpoint == null {
@@ -64,6 +79,15 @@ main {
 h1 {
   font-weight: 200;
   @include font-size($title-font-sizes);
+}
+
+h2 {
+  font-weight: 200;
+  @include font-size($h2-sizes)
+}
+
+p {
+  @include font-size($p-sizes)
 }
 
 .link {
