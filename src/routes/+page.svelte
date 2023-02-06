@@ -5,6 +5,7 @@
 	import Nav from '../lib/components/Nav.svelte';
 	import DownArrow from '../lib/components/DownArrow.svelte';
 	import Article from '../lib/components/Article.svelte';
+	import UpArrow from '../lib/components/UpArrow.svelte';
 
 	let ready = false;
 
@@ -20,11 +21,20 @@
 	{/if}
 
 	<Nav />
-	<DownArrow {ready} scrollTo="experience" />
+	<DownArrow {ready} fadeIn={true} scrollTo="intro" />
 </header>
 
 <section>
-
+  <Article scrollID="intro">
+    <h2>Who am I?</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat harum et veritatis culpa! Vitae, soluta. Iure reprehenderit minima officia? Unde ipsam nostrum, numquam cupiditate molestiae libero suscipit vero harum beatae deserunt. Accusamus, optio aut ullam odit blanditiis expedita esse, nam commodi cumque reiciendis dicta officiis aliquam eaque hic quaerat non numquam ea aperiam veniam, quibusdam fugiat! Quam, libero aut rem distinctio inventore sint nemo dolores iure ipsum tempore vel incidunt dicta quod rerum error expedita pariatur. Consequatur libero hic assumenda? Nihil nobis corrupti vel distinctio pariatur facere animi porro perspiciatis cumque asperiores, dolor excepturi accusantium officia assumenda praesentium quaerat!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat harum et veritatis culpa! Vitae, soluta. Iure reprehenderit minima officia? Unde ipsam nostrum, numquam cupiditate molestiae libero suscipit vero harum beatae deserunt. Accusamus, optio aut ullam odit blanditiis expedita esse, nam commodi cumque reiciendis dicta officiis aliquam eaque hic quaerat non numquam ea aperiam veniam, quibusdam fugiat! Quam, libero aut rem distinctio inventore sint nemo dolores iure ipsum tempore vel incidunt dicta quod rerum error expedita pariatur. Consequatur libero hic assumenda? Nihil nobis corrupti vel distinctio pariatur facere animi porro perspiciatis cumque asperiores, dolor excepturi accusantium officia assumenda praesentium quaerat!
+    </p>
+    <DownArrow scrollTo="experience" />
+  </Article>
   <Article scrollID="experience">
     <h2>Experience</h2>
     <p>
@@ -33,7 +43,19 @@
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat harum et veritatis culpa! Vitae, soluta. Iure reprehenderit minima officia? Unde ipsam nostrum, numquam cupiditate molestiae libero suscipit vero harum beatae deserunt. Accusamus, optio aut ullam odit blanditiis expedita esse, nam commodi cumque reiciendis dicta officiis aliquam eaque hic quaerat non numquam ea aperiam veniam, quibusdam fugiat! Quam, libero aut rem distinctio inventore sint nemo dolores iure ipsum tempore vel incidunt dicta quod rerum error expedita pariatur. Consequatur libero hic assumenda? Nihil nobis corrupti vel distinctio pariatur facere animi porro perspiciatis cumque asperiores, dolor excepturi accusantium officia assumenda praesentium quaerat!
     </p>
+    <DownArrow scrollTo="values" />
   </Article>
+  <Article scrollID="values">
+    <h2>Values</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat harum et veritatis culpa! Vitae, soluta. Iure reprehenderit minima officia? Unde ipsam nostrum, numquam cupiditate molestiae libero suscipit vero harum beatae deserunt. Accusamus, optio aut ullam odit blanditiis expedita esse, nam commodi cumque reiciendis dicta officiis aliquam eaque hic quaerat non numquam ea aperiam veniam, quibusdam fugiat! Quam, libero aut rem distinctio inventore sint nemo dolores iure ipsum tempore vel incidunt dicta quod rerum error expedita pariatur. Consequatur libero hic assumenda? Nihil nobis corrupti vel distinctio pariatur facere animi porro perspiciatis cumque asperiores, dolor excepturi accusantium officia assumenda praesentium quaerat!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat harum et veritatis culpa! Vitae, soluta. Iure reprehenderit minima officia? Unde ipsam nostrum, numquam cupiditate molestiae libero suscipit vero harum beatae deserunt. Accusamus, optio aut ullam odit blanditiis expedita esse, nam commodi cumque reiciendis dicta officiis aliquam eaque hic quaerat non numquam ea aperiam veniam, quibusdam fugiat! Quam, libero aut rem distinctio inventore sint nemo dolores iure ipsum tempore vel incidunt dicta quod rerum error expedita pariatur. Consequatur libero hic assumenda? Nihil nobis corrupti vel distinctio pariatur facere animi porro perspiciatis cumque asperiores, dolor excepturi accusantium officia assumenda praesentium quaerat!
+    </p>
+    <UpArrow />
+  </Article>
+
 </section>
 
 <style>

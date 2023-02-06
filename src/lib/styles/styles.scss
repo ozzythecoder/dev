@@ -91,6 +91,7 @@ p {
 }
 
 .link {
+  @include font-size($p-sizes);
   text-decoration: none;
   color: $text-accent;
 }

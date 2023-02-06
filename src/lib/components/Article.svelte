@@ -30,4 +30,8 @@ export let scrollID;
   .card :global(p) {
     margin: 1.3rem 0;
   }
+
+  .card :global(.center) {
+    text-align: center;
+  }
 </style>
