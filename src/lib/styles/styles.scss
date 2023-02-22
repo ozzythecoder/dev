@@ -86,6 +86,12 @@ h2 {
   @include font-size($h2-sizes)
 }
 
+h3 {
+  font-weight: 200;
+  font-size: 32px;
+  margin-top: 1rem;
+}
+
 .body-text {
   @include font-size($p-sizes)
 }
