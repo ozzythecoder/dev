@@ -8,6 +8,7 @@
 	import UpArrow from '../lib/components/UpArrow.svelte';
 	import BodyText from '../lib/components/BodyText.svelte';
   import Divider from '../lib/components/Divider.svelte';
+	import Spotlight from '../lib/components/Spotlight.svelte';
 
 	let ready = false;
 
@@ -37,8 +38,11 @@
 			<li>full-stack developer</li>
 			<li>musician</li>
 			<li>video game enjoyer</li>
+      <li>non-binary (they/them pronouns)</li>
+      <li>extrovert, but also a homebody</li>
+      <li>cancer sun ♋️</li>
 		</ul>
-    <Divider />
+    <Divider hideOnSmall />
     <BodyText>
       As a child of the internet, my curiosity about tech started at a young age. I remember when I was 12, flipping through my mom's old PHP books and not understanding anything. Then flipping through her HTML books and understanding enough to build a little "message board" on Yahoo GeoCities. I've played video games for most of my life, and I've made music using a computer since 2010, and through it all, I've had countless moments where I've interacted with a piece of software and thought "how does that <i>work</i>?"
     </BodyText>
@@ -47,36 +51,48 @@
     </BodyText>
     <BodyText>
       Remaining curious and adaptable, I found a lot of fulfillment in the process of software development. Being able to look at a problem, identify its smaller issues, craft a set of detailed solutions, and then iterate over those solutions to polish them into a cohesive and beautiful user experience… It still feels a bit like magic.
-      
 		</BodyText>
 
 		<DownArrow scrollTo="experience" />
 	</Article>
 
 	<Article scrollID="experience">
+
 		<h2>Experience</h2>
-		<BodyText>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat harum et veritatis
-			culpa! Vitae, soluta. Iure reprehenderit minima officia? Unde ipsam nostrum, numquam
-			cupiditate molestiae libero suscipit vero harum beatae deserunt. Accusamus, optio aut ullam
-			odit blanditiis expedita esse, nam commodi cumque reiciendis dicta officiis aliquam eaque hic
-			quaerat non numquam ea aperiam veniam, quibusdam fugiat! Quam, libero aut rem distinctio
-			inventore sint nemo dolores iure ipsum tempore vel incidunt dicta quod rerum error expedita
-			pariatur. Consequatur libero hic assumenda? Nihil nobis corrupti vel distinctio pariatur
-			facere animi porro perspiciatis cumque asperiores, dolor excepturi accusantium officia
-			assumenda praesentium quaerat!
-		</BodyText>
-		<BodyText>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat harum et veritatis
-			culpa! Vitae, soluta. Iure reprehenderit minima officia? Unde ipsam nostrum, numquam
-			cupiditate molestiae libero suscipit vero harum beatae deserunt. Accusamus, optio aut ullam
-			odit blanditiis expedita esse, nam commodi cumque reiciendis dicta officiis aliquam eaque hic
-			quaerat non numquam ea aperiam veniam, quibusdam fugiat! Quam, libero aut rem distinctio
-			inventore sint nemo dolores iure ipsum tempore vel incidunt dicta quod rerum error expedita
-			pariatur. Consequatur libero hic assumenda? Nihil nobis corrupti vel distinctio pariatur
-			facere animi porro perspiciatis cumque asperiores, dolor excepturi accusantium officia
-			assumenda praesentium quaerat!
-		</BodyText>
+    
+    <!-- PRIME DIGITAL ACADEMY -->
+    <Spotlight>
+      <img slot="picture" src="./prime-graduation.jpg" alt="jfe" />
+      <p slot="picture-caption">
+        The Shawl cohort on graduation day -<br />
+        I'm furthest to the right!
+      </p>
+      <div slot="content">
+        <h3>Prime Digital Academy</h3>
+        <BodyText>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis aut suscipit a numquam, amet quisquam omnis excepturi. Nobis, corporis sequi! Quisquam et, dicta corrupti laudantium inventore placeat ipsum, cupiditate ipsam quaerat praesentium hic natus libero autem reprehenderit illum ipsa harum. Reiciendis quae perferendis ipsam dolore obcaecati consequuntur deleniti a blanditiis aut laborum illum assumenda, odit officia magni officiis voluptates in eveniet, inventore similique ducimus sapiente quasi! Quasi natus neque nemo at, architecto fuga illum ex officiis iusto enim quibusdam quod accusantium, recusandae voluptatum excepturi alias fugiat dolorem consequuntur pariatur beatae! Distinctio harum tempore inventore reiciendis! Adipisci quae numquam quam?
+        </BodyText>
+      </div>
+    </Spotlight>
+
+    <Divider />
+
+    <Spotlight direction="row-reverse">
+      <img slot="picture" src="./storyteller2square.jpg" alt="jfe" />
+      <p slot="picture-caption">
+        Performing at The Storyteller Fest 2019<br />
+        &copy; The Storyteller Media
+      </p>
+      <div slot="content">
+        <h3>Freelance Musician</h3>
+        <BodyText>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis aut suscipit a numquam, amet quisquam omnis excepturi. Nobis, corporis sequi! Quisquam et, dicta corrupti laudantium inventore placeat ipsum, cupiditate ipsam quaerat praesentium hic natus libero autem reprehenderit illum ipsa harum. Reiciendis quae perferendis ipsam dolore obcaecati consequuntur deleniti a blanditiis aut laborum illum assumenda, odit officia magni officiis voluptates in eveniet, inventore similique ducimus sapiente quasi! Quasi natus neque nemo at, architecto fuga illum ex officiis iusto enim quibusdam quod accusantium, recusandae voluptatum excepturi alias fugiat dolorem consequuntur pariatur beatae! Distinctio harum tempore inventore reiciendis! Adipisci quae numquam quam?
+        </BodyText>
+      </div>
+    </Spotlight>
+
+    <Divider hideOnSmall />
+
 		<DownArrow scrollTo="values" />
 	</Article>
 
@@ -139,14 +155,20 @@
       text-align: center;
 		}
 	}
+
+  h1 {
+    will-change: transform, opacity;
+  }
+
 	@media screen and (max-width: 600px) {
 		.flex-list {
 			flex-direction: column;
 			align-items: center;
+
+      li {
+        padding: 0.3rem;
+      }
 		}
 	}
 
-	h1 {
-		will-change: transform, opacity;
-	}
 </style>
