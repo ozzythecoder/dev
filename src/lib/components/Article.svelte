@@ -34,4 +34,11 @@ export let scrollID;
   .card :global(.center) {
     text-align: center;
   }
+
+  @media screen and (max-width:480px) {
+    :global(h2) {
+      margin: 0;
+      text-align: center;
+    }
+  }
 </style>

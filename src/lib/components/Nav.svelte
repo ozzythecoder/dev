@@ -12,7 +12,7 @@
 			url: 'https://www.linkedin.com/in/august-mcallister/'
 		}, {
       name: 'Latest Project',
-      url: 'https://github.com/ozzythecoder/flyby-events-solo-project'
+      url: 'https://github.com/ozzythecoder/PlugNPlay'
     }
 	];
 
