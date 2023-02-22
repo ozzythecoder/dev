@@ -86,7 +86,7 @@ h2 {
   @include font-size($h2-sizes)
 }
 
-p {
+.body-text {
   @include font-size($p-sizes)
 }
 
