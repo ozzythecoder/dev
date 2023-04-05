@@ -7,13 +7,12 @@
 		{
 			name: 'GitHub',
 			url: 'http://www.github.com/ozzythecoder/'
-		},
-		{
+		}, {
 			name: 'LinkedIn',
 			url: 'https://www.linkedin.com/in/august-mcallister/'
 		}, {
       name: 'Latest Project',
-      url: 'https://github.com/ozzythecoder/flyby-events-solo-project'
+      url: 'https://github.com/ozzythecoder/ts-recipe-book'
     }
 	];
 
@@ -27,7 +26,7 @@
 		{#if ready}
 			{#each links as link, idx}
 				<li in:fly={{ delay: 500 + idx * 500, duration: 800, x: 500, easing: circOut }}>
-					<a href={link.url}>{link.name}</a>
+					<a class="link" href={link.url} target="_blank" rel="noreferrer">{link.name}</a>
 				</li>
 			{/each}
 		{:else}

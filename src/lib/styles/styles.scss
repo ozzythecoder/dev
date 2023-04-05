@@ -1,13 +1,21 @@
-@use 'sass:map';
-@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&family=Gantari:wght@200;400;700&display=swap');
+// ==========================================================================
+// IMPORTS
 
-// =====================================
+// MAP
+@use 'sass:map';
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&family=Gantari:wght@200;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+
+// ==========================================================================
 // COLOR PALETTE
 
 $text-primary: #f5f5f5;
 $text-accent: #ffbc7c;
 
-// =====================================
+// ==========================================================================
 // RESPONSIVE FONT SIZES
 
 $title-font-sizes: (
@@ -16,6 +24,21 @@ $title-font-sizes: (
   760px: 66px,
   1024px: 76px,
   1440px: 96px
+);
+
+$h2-sizes: (
+  null: 38px,
+  480px: 44px,
+  760px: 50px,
+  1024px: 56px,
+  1440px: 60px
+);
+
+$p-sizes: (
+  null: 16px,
+  480px: 17px,
+  760px: 18px,
+  1440px: 20px
 );
 
 @mixin font-size($fs-map) {
@@ -31,13 +54,20 @@ $title-font-sizes: (
   }
 }
 
-// =====================================
+// ==========================================================================
 // GLOBAL STYLES
+
+html {
+  scroll-behavior: smooth;
+}
 
 body, h1, h2, p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   background-color: rgb(0, 0, 60);
 }
 
@@ -51,11 +81,27 @@ h1 {
   @include font-size($title-font-sizes);
 }
 
-a {
+h2 {
+  font-weight: 200;
+  @include font-size($h2-sizes)
+}
+
+h3 {
+  font-weight: 200;
+  font-size: 32px;
+  margin-top: 1rem;
+}
+
+.body-text {
+  @include font-size($p-sizes)
+}
+
+.link {
+  @include font-size($p-sizes);
   text-decoration: none;
   color: $text-accent;
 }
 
-a:hover {
+.link:hover {
   text-decoration: underline;
 }
