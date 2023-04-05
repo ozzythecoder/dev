@@ -54,25 +54,49 @@
 <section>
 	<Article scrollID="intro">
 		<h2>Who am I?</h2>
+
 		<BodyText>The short version:</BodyText>
-		<ul class="body-text flex-list" id="keywords">
-			<li>Swedish-American</li>
-			<li>full-stack developer</li>
-			<li>musician</li>
-			<li>video game enjoyer</li>
-      <li>non-binary (they/them pronouns)</li>
-      <li>extrovert, but also a homebody</li>
-      <li>cancer sun ♋️</li>
-		</ul>
-    <Divider hideOnSmall />
-    <BodyText>
-      As a child of the internet, my curiosity about tech started at a young age. I remember when I was 12, flipping through my mom's old PHP books and not understanding anything. Then flipping through her HTML books and understanding enough to build a little "message board" on Yahoo GeoCities. I've played video games for most of my life, and I've made music using a computer since 2010, and through it all, I've had countless moments where I've interacted with a piece of software and thought "how does that <i>work</i>?"
-    </BodyText>
-    <BodyText>
-      When I was sixteen, I moved from my hometown of Anchorage, Alaska to my mother's hometown of Östersund, Sweden. Knowing only family, I quickly built a new life as a student, musician, and community member. Then when I was 21, after a long road trip and an expensive parking ticket, I did it again in Minneapolis, Minnesota. Both of these moves were shifts in the right direction, but they were monumental. Those years proved how valuable my adaptability is, but also encouraged me to start seeking some roots.
-    </BodyText>
-    <BodyText>
-      Remaining curious and adaptable, I found a lot of fulfillment in the process of software development. Being able to look at a problem, identify its smaller issues, craft a set of detailed solutions, and then iterate over those solutions to polish them into a cohesive and beautiful user experience… It still feels a bit like magic.
+
+		<IntersectionObserver bind:intersecting once {element}>
+			<div bind:this={element}>
+				<ul class="body-text flex-list" id="keywords">
+					{#if intersecting}
+						{#each bulletPoints as bullet, idx}
+							<li
+								transition:fly={{ delay: 300 + idx * 300, duration: 800, x: 500, easing: circOut }}
+							>
+								{@html bullet}
+							</li>
+						{/each}
+					{:else}
+						<li />
+					{/if}
+				</ul>
+			</div>
+		</IntersectionObserver>
+
+		<Divider hideOnSmall />
+		<BodyText>
+			As a child of the internet, my curiosity about tech started at a young age. I remember when I
+			was 12, flipping through my mom's old PHP books and not understanding anything. Then flipping
+			through her HTML books and understanding enough to build a little "message board" on Yahoo
+			GeoCities. I've played video games for most of my life, and I've made music using a computer
+			since 2010, and through it all, I've had countless moments where I've interacted with a piece
+			of software and thought "how does that <i>work</i>?"
+		</BodyText>
+		<BodyText>
+			When I was sixteen, I moved from my hometown of Anchorage, Alaska to my mother's hometown of
+			Östersund, Sweden. Knowing only family, I quickly built a new life as a student, musician, and
+			community member. Then when I was 21, after a long road trip and an expensive parking ticket,
+			I did it again in Minneapolis, Minnesota. Both of these moves were shifts in the right
+			direction, but they were monumental. Those years proved how valuable my adaptability is, but
+			also encouraged me to start seeking some roots.
+		</BodyText>
+		<BodyText>
+			Remaining curious and adaptable, I found a lot of fulfillment in the process of software
+			development. Being able to look at a problem, identify its smaller issues, craft a set of
+			detailed solutions, and then iterate over those solutions to polish them into a cohesive and
+			beautiful user experience… It still feels a bit like magic.
 		</BodyText>
 
 		<DownArrow scrollTo="experience" />
