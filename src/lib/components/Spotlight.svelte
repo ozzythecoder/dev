@@ -7,7 +7,7 @@
     <article class="spotlight-content">
       <slot name="content" />
     </article>
-    <aside class="spotlight-content">
+    <aside class="spotlight-content spotlight-img">
       <slot name="picture" />
       <div class="picture-caption">
         <slot name="picture-caption" />
@@ -18,8 +18,9 @@
 
 <style>
 
-  :global(h3) {
+  :global(h3,h4) {
     text-align: center;
+    margin: 0.5rem auto;
   }
 
   .container {
@@ -28,12 +29,16 @@
 
   .spotlight-grid {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
   }
 
   .spotlight-content {
     width: 50%;
+  }
+
+  .spotlight-img {
+    margin: auto 0;
   }
 
   aside {
@@ -47,13 +52,15 @@
   }
 
   .picture-caption :global(p) {
-    margin-top: 1rem;
+    margin-top: calc(8px + 1.5625vw);
     font-style: italic;
+    color: #b7b7b7;
   }
   
   @media screen and (max-width: 600px) {
     .spotlight-grid {
-      flex-direction: column-reverse;
+      flex-direction: column-reverse !important;
+      gap: 0;
     }
 
     .spotlight-content {
