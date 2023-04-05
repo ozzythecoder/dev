@@ -18,13 +18,13 @@
 	let element;
 	let intersecting;
 
-  let princeSymbolString =
-    '<img style="height:1.2rem; margin-bottom:-0.2rem" src="./Prince-Love-Symbol.svg" />'
+	let princeSymbolString =
+		'<img style="height:1.2rem; margin-bottom:-0.2rem" src="./Prince-Love-Symbol.svg" />';
 	let enbyFlagString =
 		'<img style="height:0.8rem;" src="./nonbinary-flag.png" alt="non-binary pride flag" />';
 
 	const bulletPoints = [
-    `📌${princeSymbolString} Minneapolis, Minnesota`,
+		`📌${princeSymbolString} Minneapolis, Minnesota`,
 		'🇸🇪 Swedish-American',
 		`${enbyFlagString} non-binary (they/them)`,
 		'💻 full-stack software developer',
@@ -107,23 +107,25 @@
 
 		<!-- PRIME DIGITAL ACADEMY -->
 		<Spotlight>
-			<img slot="picture" src="./prime-graduation.jpg" />
+			<img slot="picture" src="./prime-graduation.jpg" alt="The Shawl cohort on graduation day - a group of students and instructors in black Prime hoodies, smiling at the camera, with the Prime logo on the wall behind them." />
 			<p slot="picture-caption">
 				The Shawl cohort on graduation day -<br />
 				I'm furthest to the right!
 			</p>
 			<div slot="content">
-				<h3>Prime Digital Academy</h3>
-				<BodyText>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis aut suscipit a
-					numquam, amet quisquam omnis excepturi. Nobis, corporis sequi! Quisquam et, dicta corrupti
-					laudantium inventore placeat ipsum, cupiditate ipsam quaerat praesentium hic natus libero
-					autem reprehenderit illum ipsa harum. Reiciendis quae perferendis ipsam dolore obcaecati
-					consequuntur deleniti a blanditiis aut laborum illum assumenda, odit officia magni
-					officiis voluptates in eveniet, inventore similique ducimus sapiente quasi! Quasi natus
-					neque nemo at, architecto fuga illum ex officiis iusto enim quibusdam quod accusantium,
-					recusandae voluptatum excepturi alias fugiat dolorem consequuntur pariatur beatae!
-					Distinctio harum tempore inventore reiciendis! Adipisci quae numquam quam?
+				<h3>Full-Stack Software Development Student</h3>
+				<h4>Prime Digital Academy</h4>
+				<BodyText spotlight>
+					<p class="callout">September - February 2023</p>
+					Prime is a 20-week accelerated learning program, with a full-stack development track and a
+					UX track. In 2023, I graduated from the full-stack program with the Shawl cohort.
+					<ul>
+						<li>Built full-stack applications with React, Redux, Node.js and Express</li>
+						<li>Strong emphasis on professional development</li>
+						<li>Solo projects, pair programming, and group collaboration</li>
+						<li>Git version control, branching, and resolving merge conflicts</li>
+						<li>In-person and remote work experience</li>
+					</ul>
 				</BodyText>
 			</div>
 		</Spotlight>
@@ -131,28 +133,60 @@
 		<Divider />
 
 		<Spotlight direction="row-reverse">
-			<img slot="picture" src="./storyteller2square.jpg" />
+			<img
+				slot="picture"
+				src="https://images.squarespace-cdn.com/content/v1/5c1914b03c3a53de3d292348/1546890775613-EZDKY9KKZQEFAGO7TK5K/Square+Black.jpg"
+        alt="A white AVEX logo on a black background"
+			/>
+			<div slot="content">
+				<h3>Event Technical Specialist</h3>
+				<h4>AVEX Audiovisual, Inc.</h4>
+				<BodyText spotlight>
+					<p class="callout">March - August 2022</p>
+					<ul>
+						<li>Facilitated corporate events at hotels across the twin cities area</li>
+						<li>Calculated technical needs and constraints and made necessary adjustments</li>
+						<li>Built and operated audio, lighting, and projection systems</li>
+						<li>
+							Adapted to changes throughout events and collaborated with others to eliminate
+							emergent technical issues
+						</li>
+						<li>
+							Communicated with clients and keynote speakers to ensure a punctual and professional
+							event
+						</li>
+					</ul>
+				</BodyText>
+			</div>
+		</Spotlight>
+
+		<Divider />
+
+		<Spotlight direction="row">
+			<img slot="picture" src="./storyteller2square.jpg" alt="August on stage, eyes closed, wearing a denim jacket and hoop earrings, with one hand on their chest and the other clutching a microphone, with stage lights behind them" />
 			<p slot="picture-caption">
 				Performing at The Storyteller Fest 2019<br />
 				&copy; The Storyteller Media
 			</p>
 			<div slot="content">
 				<h3>Freelance Musician</h3>
-				<BodyText>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis aut suscipit a
-					numquam, amet quisquam omnis excepturi. Nobis, corporis sequi! Quisquam et, dicta corrupti
-					laudantium inventore placeat ipsum, cupiditate ipsam quaerat praesentium hic natus libero
-					autem reprehenderit illum ipsa harum. Reiciendis quae perferendis ipsam dolore obcaecati
-					consequuntur deleniti a blanditiis aut laborum illum assumenda, odit officia magni
-					officiis voluptates in eveniet, inventore similique ducimus sapiente quasi! Quasi natus
-					neque nemo at, architecto fuga illum ex officiis iusto enim quibusdam quod accusantium,
-					recusandae voluptatum excepturi alias fugiat dolorem consequuntur pariatur beatae!
-					Distinctio harum tempore inventore reiciendis! Adipisci quae numquam quam?
+				<BodyText spotlight>
+					<p class="callout">2018 - Present</p>
+					<ul>
+						<li>
+							Work directly with other musicians on composition & arrangement, audio engineering,
+							production, and post-production
+						</li>
+						<li>Organize, promote, and execute live events</li>
+						<li>
+							Communicate with venues to negotiate set times, riders, artist payment, and other
+							event details
+						</li>
+						<li>Perform live on bass, piano, synthesizer, and as background & solo vocalist</li>
+					</ul>
 				</BodyText>
 			</div>
 		</Spotlight>
-
-		<Divider hideOnSmall />
 
 		<DownArrow scrollTo="portfolio" />
 	</Article>
@@ -163,18 +197,26 @@
 			<img slot="picture" />
 			<div slot="content">
 				<h3>Plug N Play</h3>
-				<BodyText>
+				<BodyText spotlight>
+					<p class="callout">Duration: Two-week sprint</p>
 					<div class="center">
 						<a class="link" href="https://github.com/ozzythecoder/PlugNPlay"> GitHub </a>
 					</div>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores repudiandae animi, atque
-					qui libero facere minus explicabo, numquam ab impedit ratione? Excepturi tempore nobis nemo
-					ex iusto placeat dolorum est hic! Possimus eveniet error aperiam! Reprehenderit quidem odio
-					molestiae sunt quod nesciunt officia natus dolorem neque sed, molestias quia explicabo! Eos
-					cum, expedita ipsa qui dolorum non exercitationem dolor quasi assumenda repudiandae doloremque,
-					architecto delectus asperiores possimus eius, corrupti et! Similique deleniti totam doloribus
-					dolorum amet! Sed odit quod quos ipsum placeat ut necessitatibus natus culpa, iure consectetur
-					in vero aspernatur. Beatae ipsa magnam repellat. Modi laudantium blanditiis aut dignissimos.
+					A full-stack mobile-first web app, built as a tool to help people who are new to video games.
+					Uses a one-time user survey to algorithmically generate video game recommendations, and updates
+					the algorithm based on user's future preferences. Users can view details of a video game, and
+					save it to their wishlist for later reference, or played list to influence their recommendation
+					algorithm. Includes a glossary of video game jargon that can be maintained by an administrator.
+					<ul>
+						<li>Built with React, Redux, Passport.js, Express, and PostgreSQL</li>
+						<li>Powered by data from rawg.io</li>
+						<li>Enlisted by Maxine Denis, a real-world client</li>
+						<li>Worked on a team of five for our capstone project at Prime Digital Academy</li>
+						<li>
+							My roles: project planning, server & database programming, API development &
+							implementation
+						</li>
+					</ul>
 				</BodyText>
 			</div>
 		</Spotlight>
@@ -184,20 +226,25 @@
 			<p slot="picture-caption" />
 			<div slot="content">
 				<h3>FlyBy Events</h3>
-				<BodyText>
+				<BodyText spotlight>
+					<p class="callout">Duration: Two-week sprint</p>
 					<div class="center">
 						<a class="link" href="https://github.com/ozzythecoder/flyby-events-solo-project">
 							GitHub
 						</a>
 					</div>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam et voluptatibus, in perferendis,
-					ad minus sit dignissimos eligendi quos, enim animi accusamus odit fugiat repellat ullam sunt
-					porro iure! Qui eum ullam illo voluptate odio amet hic laboriosam asperiores, sit, facere necessitatibus
-					aut non consectetur ab suscipit tempore deleniti quisquam libero quis ipsa inventore sapiente
-					quia? Iste tenetur corrupti, sapiente autem eveniet iure corporis cumque reiciendis aperiam
-					dolorem delectus sint quo hic labore ipsam voluptate cupiditate? Voluptatem culpa dolorum suscipit
-					impedit debitis eaque id? Asperiores provident molestias earum voluptatibus veritatis, quasi
-					dignissimos! Odio facilis cum placeat aliquam nulla fugiat numquam.
+					A full-stack mobile-first web app, built to create, track, and organize user events. Users
+					can create events and invite each other, and manage event visibility. Public events are visible
+					to anyone with a link, whereas private events are exclusively visible to the event host and
+					invited users.
+					<ul>
+						<li>Built with React, Redux, Passport.js, Express, and PostgreSQL</li>
+						<li>Created as my solo project for Prime Digital Academy</li>
+						<li>
+							My focus was on creating a clean user experience and interface, rather than any
+							complex functionality
+						</li>
+					</ul>
 				</BodyText>
 			</div>
 		</Spotlight>
@@ -206,22 +253,33 @@
 			<img slot="picture" />
 			<div slot="content">
 				<h3>TypeScript Recipe Book</h3>
-				<BodyText>
+				<BodyText spotlight>
+					<p class="callout">Currently in development</p>
 					<div class="center">
 						<a class="link" href="https://github.com/ozzythecoder/ts-recipe-book"> GitHub </a>
 					</div>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe illum totam distinctio quibusdam
-					velit voluptatibus omnis, atque, dolorem amet, molestiae vel maiores placeat odio et?
+					A full-stack web app, built to track recipes. Allows users to create new recipes with individual
+					steps and ingredient measurements, view other recipes, and save them to their favorites.
+
+					<ul>
+						<li>Building with TypeScript, Next.js 13, Prisma, and PostgreSQL</li>
+						<li>My first exploration of many of these technologies</li>
+						<li>
+							Currently learning: Managing complex m-n data relationships (recipes to ingredients)
+							and translating them to a clean and accessible user experience.
+						</li>
+					</ul>
 				</BodyText>
 			</div>
 		</Spotlight>
 
-    <BodyText>
-      <h3>And of course, this website!</h3>
-      <div class="center">
-        <a class="link" href="/">GitHub</a>
-      </div>
-    </BodyText>
+		<BodyText>
+			<h3>And of course, this website!</h3>
+			<div class="center">
+				<a class="link" href="/">GitHub</a>
+			</div>
+			<p class="center">Built with Svelte, SvelteKit, and SCSS.</p>
+		</BodyText>
 
 		<DownArrow scrollTo="values" />
 	</Article>
@@ -229,9 +287,21 @@
 	<Article scrollID="values">
 		<h2>Values</h2>
 		<BodyText>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quae odit dicta nesciunt
-			nobis nam optio consequatur, in magni quas nihil, cum nostrum ipsa dolor modi exercitationem
-			eos id animi?
+			I stand for the liberation, safety, and autonomy of queer and transgender people worldwide.
+		</BodyText>
+		<BodyText>
+			I stand for anti-racism: not simply for diversity and inclusion, but also for the aggressive
+			opposition to hateful systems and ideologies; for material reparations to descendants of
+			slavery and survivors of colonization; and for the dismantling of the white supremacist core
+			of our culture.
+		</BodyText>
+		<BodyText>
+			I stand for police and prison abolition, and for re-investing into new systems of community
+			safety, new systems that do not act as the weapons of class warfare and racist dogma.
+		</BodyText>
+		<BodyText>
+			In my work, my music, my personal life, my attitude to strangers and friends alike, I labor to
+			embody these values, that they will lead us to a healthier and more peaceful future.
 		</BodyText>
 		<UpArrow />
 	</Article>
@@ -248,9 +318,6 @@
 
 		background: url('/CurveLine.svg') no-repeat center center fixed;
 		background-size: cover;
-
-		/* remove for production! 👇 */
-		/* outline: 1px white solid; */
 	}
 
 	.flex-list {
