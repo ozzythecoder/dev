@@ -16,4 +16,19 @@
     text-align: center;
     margin: 0.4rem 0;
   }
+
+  :global(.callout) {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  :global(ul) {
+    margin: 0;
+  }
+
+  :global(li) {
+    margin: 0.3rem 0;
+  }
 </style>
