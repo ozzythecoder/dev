@@ -27,7 +27,7 @@ export let scrollID;
     margin: 2rem 3rem 2rem 3rem;
   }
 
-  .card :global(p) {
+  .card :global(p.body-text) {
     margin: 1.3rem 0;
   }
 
