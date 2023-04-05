@@ -12,7 +12,7 @@
 			url: 'https://www.linkedin.com/in/august-mcallister/'
 		}, {
       name: 'Latest Project',
-      url: 'https://github.com/ozzythecoder/PlugNPlay'
+      url: 'https://github.com/ozzythecoder/ts-recipe-book'
     }
 	];
 
