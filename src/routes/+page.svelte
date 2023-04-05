@@ -2,15 +2,37 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { circOut } from 'svelte/easing';
+
+	import IntersectionObserver from 'svelte-intersection-observer';
+
 	import Nav from '../lib/components/Nav.svelte';
 	import DownArrow from '../lib/components/DownArrow.svelte';
 	import Article from '../lib/components/Article.svelte';
 	import UpArrow from '../lib/components/UpArrow.svelte';
 	import BodyText from '../lib/components/BodyText.svelte';
-  import Divider from '../lib/components/Divider.svelte';
+	import Divider from '../lib/components/Divider.svelte';
 	import Spotlight from '../lib/components/Spotlight.svelte';
 
 	let ready = false;
+
+	let element;
+	let intersecting;
+
+  let princeSymbolString =
+    '<img style="height:1.2rem; margin-bottom:-0.2rem" src="./Prince-Love-Symbol.svg" />'
+	let enbyFlagString =
+		'<img style="height:0.8rem;" src="./nonbinary-flag.png" alt="non-binary pride flag" />';
+
+	const bulletPoints = [
+    `📌${princeSymbolString} Minneapolis, Minnesota`,
+		'🇸🇪 Swedish-American',
+		`${enbyFlagString} non-binary (they/them)`,
+		'💻 full-stack software developer',
+		'🎹 musician',
+		'🎮 video game enjoyer',
+		'💡🛌 extrovert, but also a homebody',
+		'♋️ cancer sun'
+	];
 
 	onMount(() => {
 		ready = true;
