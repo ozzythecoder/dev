@@ -60,15 +60,19 @@
   @media screen and (max-width: 600px) {
     .spotlight-grid {
       flex-direction: column-reverse !important;
-      gap: 0;
+      gap: 2rem;
     }
 
     .spotlight-content {
       width: 100%;
     }
 
-    aside :global(img) {
-      width: 80%;
+    :global(.img-1) {
+      max-height: 600px !important;
+    }
+
+    :global(.img-2) {
+      display: none;
     }
   }
 </style>
