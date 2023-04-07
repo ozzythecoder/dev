@@ -19,9 +19,9 @@
 	let intersecting;
 
 	let princeSymbolString =
-		'<img style="height:1.2rem; margin-bottom:-0.2rem" src="./Prince-Love-Symbol.svg" />';
+		'<img style="height:1.2rem; margin-bottom:-0.2rem" src="./icons/Prince-Love-Symbol.svg" />';
 	let enbyFlagString =
-		'<img style="height:0.8rem;" src="./nonbinary-flag.png" alt="non-binary pride flag" />';
+		'<img style="height:0.8rem;" src="./icons/nonbinary-flag.png" alt="non-binary pride flag" />';
 
 	const bulletPoints = [
 		`📌${princeSymbolString} Minneapolis, Minnesota`,
@@ -30,7 +30,8 @@
 		'💻 full-stack software developer',
 		'🎹 musician',
 		'🎮 video game enjoyer',
-		'💡🛌 extrovert, but also a homebody',
+		'💡 extrovert',
+    '🛌 homebody',
 		'♋️ cancer sun'
 	];
 
@@ -39,6 +40,10 @@
 	});
 </script>
 
+<!-- 
+  **********************************
+  HEADER
+ -->
 <header class="center-hero">
 	{#if ready}
 		<h1 in:fly={{ duration: 800, x: 500, easing: circOut }}>hey, i'm august.</h1>
@@ -51,6 +56,10 @@
 	<DownArrow {ready} fadeIn={true} scrollTo="intro" />
 </header>
 
+<!-- 
+  **********************************
+  INTRO
+ -->
 <section>
 	<Article scrollID="intro">
 		<h2>Who am I?</h2>
@@ -93,7 +102,7 @@
 			also encouraged me to start seeking some roots.
 		</BodyText>
 		<BodyText>
-			Remaining curious and adaptable, I found a lot of fulfillment in the process of software
+			Remaining curious and adaptable, I found fulfillment in the process of software
 			development. Being able to look at a problem, identify its smaller issues, craft a set of
 			detailed solutions, and then iterate over those solutions to polish them into a cohesive and
 			beautiful user experience… It still feels a bit like magic.
@@ -102,6 +111,10 @@
 		<DownArrow scrollTo="experience" />
 	</Article>
 
+  <!-- 
+    **********************************
+    EXPERIENCE
+   -->
 	<Article scrollID="experience">
 		<h2>Experience</h2>
 
@@ -116,11 +129,11 @@
 				<h3>Full-Stack Software Development Student</h3>
 				<h4>Prime Digital Academy</h4>
 				<BodyText spotlight>
-					<p class="callout">September - February 2023</p>
+					<p class="callout">September 2022 - February 2023</p>
 					Prime is a 20-week accelerated learning program, with a full-stack development track and a
-					UX track. In 2023, I graduated from the full-stack program with the Shawl cohort.
+					UX track. I graduated from the full-stack program together with the Shawl cohort.
 					<ul>
-						<li>Built full-stack applications with React, Redux, Node.js and Express</li>
+						<li>Built full-stack applications with React, Node.js, Express, and PostgreSQL</li>
 						<li>Strong emphasis on professional development</li>
 						<li>Solo projects, pair programming, and group collaboration</li>
 						<li>Git version control, branching, and resolving merge conflicts</li>
@@ -132,6 +145,7 @@
 
 		<Divider />
 
+    <!-- AVEX AUDIOVISUAL -->
 		<Spotlight direction="row-reverse">
 			<img
 				slot="picture"
@@ -162,6 +176,7 @@
 
 		<Divider />
 
+    <!-- FREELANCE MUSICIAN -->
 		<Spotlight direction="row">
 			<img slot="picture" src="./storyteller2square.jpg" alt="August on stage, eyes closed, wearing a denim jacket and hoop earrings, with one hand on their chest and the other clutching a microphone, with stage lights behind them" />
 			<p slot="picture-caption">
@@ -191,10 +206,21 @@
 		<DownArrow scrollTo="portfolio" />
 	</Article>
 
+  <Divider />
+
+  <!--
+    **********************************
+    PORTFOLIO
+   -->
 	<Article scrollID="portfolio">
 		<h2>Portfolio</h2>
+
+    <!-- PLUG N PLAY -->
 		<Spotlight direction="row">
-			<img slot="picture" />
+			<div slot="picture">
+        <img src="./plug-n-play-screenshot1.png" class="img-1" alt="A screenshot of the recommendation page of the Plug N Play app." />
+        <img src="./plug-n-play-screenshot2.png" class="img-2" alt="A screenshot of the collections page of the Plug N Play app."/>
+      </div>
 			<div slot="content">
 				<h3>Plug N Play</h3>
 				<BodyText spotlight>
@@ -221,8 +247,14 @@
 			</div>
 		</Spotlight>
 
+    <Divider />
+
+    <!-- FLYBY EVENTS -->
 		<Spotlight direction="row-reverse">
-			<img slot="picture" />
+			<div slot="picture">
+        <img src="./flyby-screenshot1.png" class="img-1" alt="A screenshot of the edit event form in the FlyBy events app." />
+        <img src="./flyby-screenshot2.png" class="img-2" alt="A screenshot of an event preview in the FlyBy events app." />
+      </div>
 			<p slot="picture-caption" />
 			<div slot="content">
 				<h3>FlyBy Events</h3>
@@ -249,8 +281,10 @@
 			</div>
 		</Spotlight>
 
+    <Divider />
+
+    <!-- TS RECIPE BOOK -->
 		<Spotlight direction="row">
-			<img slot="picture" />
 			<div slot="content">
 				<h3>TypeScript Recipe Book</h3>
 				<BodyText spotlight>
@@ -273,6 +307,8 @@
 			</div>
 		</Spotlight>
 
+    <Divider />
+
 		<BodyText>
 			<h3>And of course, this website!</h3>
 			<div class="center">
@@ -284,10 +320,17 @@
 		<DownArrow scrollTo="values" />
 	</Article>
 
+
+  <Divider />
+
+  <!-- 
+    **********************************
+    VALUES
+   -->
 	<Article scrollID="values">
 		<h2>Values</h2>
 		<BodyText>
-			I stand for the liberation, safety, and autonomy of queer and transgender people worldwide.
+			I stand for the safety, autonomy, and liberation of my queer and transgender siblings worldwide.
 		</BodyText>
 		<BodyText>
 			I stand for anti-racism: not simply for diversity and inclusion, but also for the aggressive
@@ -300,13 +343,17 @@
 			safety, new systems that do not act as the weapons of class warfare and racist dogma.
 		</BodyText>
 		<BodyText>
-			In my work, my music, my personal life, my attitude to strangers and friends alike, I labor to
+			These are the values of the people I love and look up to. In my work, my music, my personal life, my attitude to strangers and friends alike, I labor to
 			embody these values, that they will lead us to a healthier and more peaceful future.
 		</BodyText>
 		<UpArrow />
 	</Article>
 </section>
 
+<!--
+  **********************************
+  STYLES
+-->
 <style lang="scss">
 	.center-hero {
 		position: relative;
@@ -322,16 +369,16 @@
 
 	.flex-list {
 		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-		justify-content: space-evenly;
+		flex-flow: row wrap;
+		justify-content: space-around;
 		align-items: center;
 		margin: 0;
 		padding: 0;
-		min-height: 100px;
+		min-height: 150px;
 
 		li {
-			padding: 1rem;
+			padding: 0.6rem;
+      flex-basis: 30%;
 			list-style: none;
 			text-align: center;
 		}
@@ -345,6 +392,7 @@
 		.flex-list {
 			flex-direction: column;
 			align-items: center;
+      min-height: 350px;
 
 			li {
 				padding: 0.3rem;
