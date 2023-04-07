@@ -9,7 +9,7 @@
 <style>
   .spotlight-description {
     /* outline: 1px solid white; */
-    margin: 0.4rem 0 !important;
+    margin: 0.6rem 0 !important;
   }
 
   p :global(.center) {
