@@ -19,9 +19,9 @@
 	let intersecting;
 
 	let princeSymbolString =
-		'<img style="height:1.2rem; margin-bottom:-0.2rem" src="./icons/Prince-Love-Symbol.svg" />';
+		`<img style="height:1.2rem; margin-bottom:-0.2rem" src="./icons/Prince-Love-Symbol.svg" />`;
 	let enbyFlagString =
-		'<img style="height:0.8rem;" src="./icons/nonbinary-flag.png" alt="non-binary pride flag" />';
+		`<img style="height:0.8rem;" src="./icons/nonbinary-flag.png" alt="non-binary pride flag" />`;
 
 	const bulletPoints = [
 		`📌${princeSymbolString} Minneapolis, Minnesota`,
@@ -44,7 +44,7 @@
   **********************************
   HEADER
  -->
-<header class="center-hero">
+<header class="center-hero" id="top">
 	{#if ready}
 		<h1 in:fly={{ duration: 800, x: 500, easing: circOut }}>hey, i'm august.</h1>
 	{:else}
