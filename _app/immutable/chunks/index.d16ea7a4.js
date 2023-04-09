@@ -1,0 +1,3 @@
+import{W as m}from"./index.047ab358.js";function $(t){return Math.sqrt(1- --t*t)}function d(t){const o=t-1;return o*o*o+1}function g(t,{delay:o=0,duration:n=400,easing:r=m}={}){const c=+getComputedStyle(t).opacity;return{delay:o,duration:n,easing:r,css:s=>`opacity: ${s*c}`}}function x(t,{delay:o=0,duration:n=400,easing:r=d,x:c=0,y:s=0,opacity:f=0}={}){const a=getComputedStyle(t),e=+a.opacity,u=a.transform==="none"?"":a.transform,p=e*(1-f);return{delay:o,duration:n,easing:r,css:(i,y)=>`
+			transform: ${u} translate(${(1-i)*c}px, ${(1-i)*s}px);
+			opacity: ${e-p*y}`}}export{x as a,$ as c,g as f};
