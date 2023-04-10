@@ -236,6 +236,7 @@
 					<ul>
 						<li>Built with React, Redux, Passport.js, Express, and PostgreSQL</li>
 						<li>Powered by data from rawg.io</li>
+            <li>Deployed with Heroku, database hosted by Bit.io</li>
 						<li>Enlisted by Maxine Denis, a real-world client</li>
 						<li>Worked on a team of five for our capstone project at Prime Digital Academy</li>
 						<li>
@@ -271,6 +272,7 @@
 					invited users.
 					<ul>
 						<li>Built with React, Redux, Passport.js, Express, and PostgreSQL</li>
+            <li>Deployed with Heroku, database hosted by Bit.io</li>
 						<li>Created as my solo project for Prime Digital Academy</li>
 						<li>
 							My focus was on creating a clean user experience and interface, rather than any
@@ -314,7 +316,7 @@
 			<div class="center">
 				<a class="link" href="/">GitHub</a>
 			</div>
-			<p class="center">Built with Svelte, SvelteKit, and SCSS.</p>
+			<p class="center">Built with Svelte, SvelteKit, and SCSS, and deployed with Vercel.</p>
 		</BodyText>
 
 		<DownArrow scrollTo="values" />
