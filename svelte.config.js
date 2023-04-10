@@ -9,7 +9,7 @@ const config = {
 		adapter: adapter()
 	},
   paths: {
-    base: '/ozzythecoder.github.io'
+    base: ''
   },
 	preprocess: [sveltePreprocess()]
 };
