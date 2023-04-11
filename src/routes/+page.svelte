@@ -393,8 +393,17 @@
 	}
 
 	@media screen and (max-width: 600px) {
-    .center-hero {
-      background-position: center;
+    .center-hero::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      left: 0;
+      right: 0;
+      z-index: -1;
+
+      background: url('/CurveLine.svg') no-repeat center center fixed;
+      background-size: cover;
     }
 
 		.flex-list {
