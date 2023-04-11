@@ -401,6 +401,9 @@
 		z-index: -1;
 
 		background: url('/CurveLine.svg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 		background-size: cover;
 	}
 
@@ -426,6 +429,11 @@
 	}
 
 	@media screen and (max-width: 600px) {
+
+    .center-hero::after {
+      background-attachment: fixed;
+    }
+
 		.flex-list {
 			flex-direction: column;
 			align-items: center;
