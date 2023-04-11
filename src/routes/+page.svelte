@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
 	import { circOut } from 'svelte/easing';
 
 	import IntersectionObserver from 'svelte-intersection-observer';
@@ -364,6 +364,8 @@
 		align-items: center;
 		justify-content: center;
 		height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
 
 		background: url('/CurveLine.svg') no-repeat center center fixed;
 		background-size: cover;

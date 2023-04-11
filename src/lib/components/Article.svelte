@@ -13,6 +13,8 @@ export let scrollID;
 <style>
   article {
     min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
   .card {

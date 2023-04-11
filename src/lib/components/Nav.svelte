@@ -68,6 +68,7 @@
 </nav>
 
 <style lang="scss">
+
 	ul {
 		display: flex;
 		flex-direction: row;
