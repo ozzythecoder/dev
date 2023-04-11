@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-  import { fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import { circOut } from 'svelte/easing';
 
 	import IntersectionObserver from 'svelte-intersection-observer';
@@ -18,10 +18,8 @@
 	let element;
 	let intersecting;
 
-	let princeSymbolString =
-		`<img style="height:1.2rem; margin-bottom:-0.2rem" src="./icons/Prince-Love-Symbol.svg" />`;
-	let enbyFlagString =
-		`<img style="height:0.8rem;" src="./icons/nonbinary-flag.png" alt="non-binary pride flag" />`;
+	let princeSymbolString = `<img style="height:1.2rem; margin-bottom:-0.2rem" src="./icons/Prince-Love-Symbol.svg" />`;
+	let enbyFlagString = `<img style="height:0.8rem;" src="./icons/nonbinary-flag.png" alt="non-binary pride flag" />`;
 
 	const bulletPoints = [
 		`📌${princeSymbolString} Minneapolis, Minnesota`,
@@ -31,7 +29,7 @@
 		'🎹 musician',
 		'🎮 video game enjoyer',
 		'💡 extrovert',
-    '🛌 homebody',
+		'🛌 homebody',
 		'♋️ cancer sun'
 	];
 
@@ -102,16 +100,16 @@
 			also encouraged me to start seeking some roots.
 		</BodyText>
 		<BodyText>
-			Remaining curious and adaptable, I found fulfillment in the process of software
-			development. Being able to look at a problem, identify its smaller issues, craft a set of
-			detailed solutions, and then iterate over those solutions to polish them into a cohesive and
-			beautiful user experience… It still feels a bit like magic.
+			Remaining curious and adaptable, I found fulfillment in the process of software development.
+			Being able to look at a problem, identify its smaller issues, craft a set of detailed
+			solutions, and then iterate over those solutions to polish them into a cohesive and beautiful
+			user experience… It still feels a bit like magic.
 		</BodyText>
 
 		<DownArrow scrollTo="experience" />
 	</Article>
 
-  <!-- 
+	<!-- 
     **********************************
     EXPERIENCE
    -->
@@ -120,7 +118,11 @@
 
 		<!-- PRIME DIGITAL ACADEMY -->
 		<Spotlight>
-			<img slot="picture" src="./prime-graduation.jpg" alt="The Shawl cohort on graduation day - a group of students and instructors in black Prime hoodies, smiling at the camera, with the Prime logo on the wall behind them." />
+			<img
+				slot="picture"
+				src="./prime-graduation.jpg"
+				alt="The Shawl cohort on graduation day - a group of students and instructors in black Prime hoodies, smiling at the camera, with the Prime logo on the wall behind them."
+			/>
 			<p slot="picture-caption">
 				The Shawl cohort on graduation day -<br />
 				I'm furthest to the right!
@@ -145,12 +147,12 @@
 
 		<Divider />
 
-    <!-- AVEX AUDIOVISUAL -->
+		<!-- AVEX AUDIOVISUAL -->
 		<Spotlight direction="row-reverse">
 			<img
 				slot="picture"
 				src="https://images.squarespace-cdn.com/content/v1/5c1914b03c3a53de3d292348/1546890775613-EZDKY9KKZQEFAGO7TK5K/Square+Black.jpg"
-        alt="A white AVEX logo on a black background"
+				alt="A white AVEX logo on a black background"
 			/>
 			<div slot="content">
 				<h3>Event Technical Specialist</h3>
@@ -176,9 +178,13 @@
 
 		<Divider />
 
-    <!-- FREELANCE MUSICIAN -->
+		<!-- FREELANCE MUSICIAN -->
 		<Spotlight direction="row">
-			<img slot="picture" src="./storyteller2square.jpg" alt="August on stage, eyes closed, wearing a denim jacket and hoop earrings, with one hand on their chest and the other clutching a microphone, with stage lights behind them" />
+			<img
+				slot="picture"
+				src="./storyteller2square.jpg"
+				alt="August on stage, eyes closed, wearing a denim jacket and hoop earrings, with one hand on their chest and the other clutching a microphone, with stage lights behind them"
+			/>
 			<p slot="picture-caption">
 				Performing at The Storyteller Fest 2019<br />
 				&copy; The Storyteller Media
@@ -206,21 +212,29 @@
 		<DownArrow scrollTo="portfolio" />
 	</Article>
 
-  <Divider />
+	<Divider />
 
-  <!--
+	<!--
     **********************************
     PORTFOLIO
    -->
 	<Article scrollID="portfolio">
 		<h2>Portfolio</h2>
 
-    <!-- PLUG N PLAY -->
+		<!-- PLUG N PLAY -->
 		<Spotlight direction="row">
 			<div slot="picture">
-        <img src="./plug-n-play-screenshot1.png" class="img-1" alt="A screenshot of the recommendation page of the Plug N Play app." />
-        <img src="./plug-n-play-screenshot2.png" class="img-2" alt="A screenshot of the collections page of the Plug N Play app."/>
-      </div>
+				<img
+					src="./plug-n-play-screenshot1.png"
+					class="img-1"
+					alt="A screenshot of the recommendation page of the Plug N Play app."
+				/>
+				<img
+					src="./plug-n-play-screenshot2.png"
+					class="img-2"
+					alt="A screenshot of the collections page of the Plug N Play app."
+				/>
+			</div>
 			<div slot="content">
 				<h3>Plug N Play</h3>
 				<BodyText spotlight>
@@ -236,7 +250,7 @@
 					<ul>
 						<li>Built with React, Redux, Passport.js, Express, and PostgreSQL</li>
 						<li>Powered by data from rawg.io</li>
-            <li>Deployed with Heroku, database hosted by Bit.io</li>
+						<li>Deployed with Heroku, database hosted by Bit.io</li>
 						<li>Enlisted by Maxine Denis, a real-world client</li>
 						<li>Worked on a team of five for our capstone project at Prime Digital Academy</li>
 						<li>
@@ -248,14 +262,22 @@
 			</div>
 		</Spotlight>
 
-    <Divider />
+		<Divider />
 
-    <!-- FLYBY EVENTS -->
+		<!-- FLYBY EVENTS -->
 		<Spotlight direction="row-reverse">
 			<div slot="picture">
-        <img src="./flyby-screenshot1.png" class="img-1" alt="A screenshot of the edit event form in the FlyBy events app." />
-        <img src="./flyby-screenshot2.png" class="img-2" alt="A screenshot of an event preview in the FlyBy events app." />
-      </div>
+				<img
+					src="./flyby-screenshot1.png"
+					class="img-1"
+					alt="A screenshot of the edit event form in the FlyBy events app."
+				/>
+				<img
+					src="./flyby-screenshot2.png"
+					class="img-2"
+					alt="A screenshot of an event preview in the FlyBy events app."
+				/>
+			</div>
 			<p slot="picture-caption" />
 			<div slot="content">
 				<h3>FlyBy Events</h3>
@@ -272,7 +294,7 @@
 					invited users.
 					<ul>
 						<li>Built with React, Redux, Passport.js, Express, and PostgreSQL</li>
-            <li>Deployed with Heroku, database hosted by Bit.io</li>
+						<li>Deployed with Heroku, database hosted by Bit.io</li>
 						<li>Created as my solo project for Prime Digital Academy</li>
 						<li>
 							My focus was on creating a clean user experience and interface, rather than any
@@ -283,9 +305,9 @@
 			</div>
 		</Spotlight>
 
-    <Divider />
+		<Divider />
 
-    <!-- TS RECIPE BOOK -->
+		<!-- TS RECIPE BOOK -->
 		<Spotlight direction="row">
 			<div slot="content">
 				<h3>TypeScript Recipe Book</h3>
@@ -309,7 +331,7 @@
 			</div>
 		</Spotlight>
 
-    <Divider />
+		<Divider />
 
 		<BodyText>
 			<h3>And of course, this website!</h3>
@@ -322,17 +344,17 @@
 		<DownArrow scrollTo="values" />
 	</Article>
 
+	<Divider />
 
-  <Divider />
-
-  <!-- 
+	<!-- 
     **********************************
     VALUES
    -->
 	<Article scrollID="values">
 		<h2>Values</h2>
 		<BodyText>
-			I stand for the safety, autonomy, and liberation of my queer and transgender siblings worldwide.
+			I stand for the safety, autonomy, and liberation of my queer and transgender siblings
+			worldwide.
 		</BodyText>
 		<BodyText>
 			I stand for anti-racism: not simply for diversity and inclusion, but also for the aggressive
@@ -345,8 +367,9 @@
 			safety, new systems that do not act as the weapons of class warfare and racist dogma.
 		</BodyText>
 		<BodyText>
-			These are the values of the people I love and look up to. In my work, my music, my personal life, my attitude to strangers and friends alike, I labor to
-			embody these values, that they will lead us to a healthier and more peaceful future.
+			These are the values of the people I love and look up to. In my work, my music, my personal
+			life, my attitude to strangers and friends alike, I labor to embody these values, that they
+			will lead us to a healthier and more peaceful future.
 		</BodyText>
 		<UpArrow />
 	</Article>
@@ -364,8 +387,18 @@
 		align-items: center;
 		justify-content: center;
 		height: 100vh;
-    max-width: 100vw;
-    overflow-x: hidden;
+		max-width: 100vw;
+		overflow-x: hidden;
+	}
+
+	.center-hero::after {
+		content: '';
+		position: fixed;
+		top: 0;
+		height: 100vh;
+		left: 0;
+		right: 0;
+		z-index: -1;
 
 		background: url('/CurveLine.svg') no-repeat center center fixed;
 		background-size: cover;
@@ -382,7 +415,7 @@
 
 		li {
 			padding: 0.6rem;
-      flex-basis: 30%;
+			flex-basis: 30%;
 			list-style: none;
 			text-align: center;
 		}
@@ -393,23 +426,10 @@
 	}
 
 	@media screen and (max-width: 600px) {
-    .center-hero::after {
-      content: "";
-      position: fixed;
-      top: 0;
-      height: 100vh;
-      left: 0;
-      right: 0;
-      z-index: -1;
-
-      background: url('/CurveLine.svg') no-repeat center center fixed;
-      background-size: cover;
-    }
-
 		.flex-list {
 			flex-direction: column;
 			align-items: center;
-      min-height: 350px;
+			min-height: 350px;
 
 			li {
 				padding: 0.3rem;
