@@ -14,7 +14,7 @@
     },
     {
       name: 'Portfolio',
-      url: '/#porfolio'
+      url: '/#portfolio'
     },
     {
       name: 'Values',

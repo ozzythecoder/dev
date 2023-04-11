@@ -393,6 +393,10 @@
 	}
 
 	@media screen and (max-width: 600px) {
+    .center-hero {
+      background-position: center;
+    }
+
 		.flex-list {
 			flex-direction: column;
 			align-items: center;
