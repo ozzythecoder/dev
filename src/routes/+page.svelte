@@ -309,6 +309,9 @@
 
 		<!-- TS RECIPE BOOK -->
 		<Spotlight direction="row">
+      <div slot="picture">
+        <img src="./recipebook-screenshot1.png" class="img-1" alt="A screenshot of the add recipe page in the TS Recipe Book app." />
+      </div>
 			<div slot="content">
 				<h3>TypeScript Recipe Book</h3>
 				<BodyText spotlight>
@@ -317,15 +320,12 @@
 						<a class="link" href="https://github.com/ozzythecoder/ts-recipe-book"> GitHub </a>
 					</div>
 					A full-stack web app, built to track recipes. Allows users to create new recipes with individual
-					steps and ingredient measurements, view other recipes, and save them to their favorites.
+					steps and ingredient measurements, and view other recipes.
 
 					<ul>
-						<li>Building with TypeScript, Next.js 13, Prisma, and PostgreSQL</li>
+						<li>Building with TypeScript, Next.js 13.4, Tailwind CSS, Prisma, and PostgreSQL</li>
+            <li>Uses React Hook Form for complex form handling, and Shadcn/ui for accessible styled components</li>
 						<li>My first exploration of many of these technologies</li>
-						<li>
-							Currently learning: Managing complex m-n data relationships (recipes to ingredients)
-							and translating them to a clean and accessible user experience.
-						</li>
 					</ul>
 				</BodyText>
 			</div>
