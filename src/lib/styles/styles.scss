@@ -110,3 +110,7 @@ h4 {
 .link:hover {
   text-decoration: underline;
 }
+
+.link.unstyled {
+  color: $text-primary;
+}
