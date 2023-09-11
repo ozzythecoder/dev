@@ -4,14 +4,15 @@
 </script>
 
 <header>
-  <h1>Blogust</h1>
+  <h2>Blogust</h2>
 </header>
-<div>
+<div class="post-grid">
   {#each postData as post}
     <article class="blog-post-preview">
-      <a href={post.path} class="link unstyled" >
+      <a href={post.path} class="unstyled link" >
         <div class="post-link">
-          <h2>{post.metadata?.title}</h2>
+          <h2 class="link-highlight">{post.metadata?.title}</h2>
+          <p class="date muted-text">{post.metadata?.date ?? ""}</p>
           <p>{post.metadata?.description}</p>
         </div>
       </a>
@@ -19,14 +20,26 @@
   {/each}
 </div>
 
-<style>
-  h1 {
+<style lang="scss">
+
+  header {
+    margin: 2rem auto;
     text-align: center;
   }
 
-  .blog-post-preview {
+  .post-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
     margin: 0 auto;
     max-width: 1000px;
+  }
+
+  .blog-post-preview {
+    max-height: 500px;
+
+    .date {
+      font-style: italic;
+    }
   }
 
   .post-link {
@@ -35,4 +48,5 @@
     margin: 5px;
     padding: 20px;
   }
+
 </style>
