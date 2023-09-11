@@ -12,7 +12,7 @@
       <a href={post.path} class="unstyled link" >
         <div class="post-link">
           <h2 class="link-highlight">{post.metadata?.title}</h2>
-          <p class="date muted-text">{post.metadata?.date ?? ""}</p>
+          <p class="date muted-text">{post.metadata?.date ?? "‎"}</p>
           <p>{post.metadata?.description}</p>
         </div>
       </a>
@@ -28,13 +28,13 @@
   }
 
   .post-grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex column;
     margin: 0 auto;
     max-width: 1000px;
   }
 
   .blog-post-preview {
+    margin: 10px 0;
     max-height: 500px;
 
     .date {
