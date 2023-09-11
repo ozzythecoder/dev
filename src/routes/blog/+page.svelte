@@ -1,25 +1,32 @@
 <script>
-
   export let data;
   const { postData } = data;
 </script>
 
-<h1>Hey</h1>
+<header>
+  <h1>Blogust</h1>
+</header>
 <div>
   {#each postData as post}
-    <a href={post.path} class="link unstyled" >
-
-    <div class="post-link">
-      <h2>{post.metadata?.title}</h2>
-      <p>{post.metadata?.description}</p>
-    </div>
-    </a>
+    <article class="blog-post-preview">
+      <a href={post.path} class="link unstyled" >
+        <div class="post-link">
+          <h2>{post.metadata?.title}</h2>
+          <p>{post.metadata?.description}</p>
+        </div>
+      </a>
+    </article>
   {/each}
 </div>
 
 <style>
   h1 {
-    font-size: 100px;
+    text-align: center;
+  }
+
+  .blog-post-preview {
+    margin: 0 auto;
+    max-width: 1000px;
   }
 
   .post-link {
