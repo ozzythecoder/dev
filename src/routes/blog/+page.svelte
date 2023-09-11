@@ -27,7 +27,24 @@
     text-align: center;
   }
 
+  header::after {
+		content: '';
+		position: fixed;
+		top: 0;
+		height: 100vh;
+		left: 0;
+		right: 0;
+		z-index: -1;
+
+		background: url('/CurveLine.svg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+		background-size: cover;
+	}
+
   .post-grid {
+    position: relative;
     display: flex column;
     margin: 0 auto;
     max-width: 1000px;
@@ -40,6 +57,8 @@
     .date {
       font-style: italic;
     }
+
+    
   }
 
   .post-link {
@@ -47,6 +66,17 @@
     border-radius: 10px;
     margin: 5px;
     padding: 20px;
+    
+    ::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      background-color: rgb(0, 0, 60);
+    }
   }
 
 </style>
