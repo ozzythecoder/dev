@@ -1,16 +1,15 @@
 <script>
   export let data;
-
   const { Content, metadata } = data;
 </script>
 
 <header>
   {metadata.title}
 </header>
-
 <article>
-  <Content />
+  <Content ref="blog" class="dude" />
 </article>
-<style>
+
+<style lang="scss">
 
 </style>
