@@ -13,6 +13,14 @@ My solo project at Prime Digital Academy was one of the hardest things I've ever
 
 My solo project came pre-loaded with Passport.js middleware and a basic username/password login strategy. Since then I've learned that passwords are not the strongest option for auth, and I also didn't encrypt emails or phone numbers before storing them (!!!!!).
 
+```jsx
+export default function YIKES() {
+  return (
+    <h1>CRINGE!</h1>
+  )
+}
+```
+
 I've since become a much stronger believer in 1) OAuth, and 2) outsourcing auth to a third party. Security being its own vast discipline, I want to keep my focus on building the interface and data logic of the application. It's impossible to understand everything, after all. This is why I'll be using Clerk for user authentication in FlyBy 2.0.
 
 ### ✦ TypeScript
