@@ -7,17 +7,12 @@
 // RESPONSIVE FONT SIZING
 @use './font-mixins';
 
+// COLOR PALETTE
+@use './text-colors';
+
 // FONTS
 @import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&family=Gantari:wght@200;400;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
-
-
-// ==========================================================================
-// COLOR PALETTE
-
-$text-primary: #f5f5f5;
-$text-accent: #ffbc7c;
-$text-muted: #b7b7b7;
 
 // ==========================================================================
 // GLOBALS
@@ -38,7 +33,7 @@ body {
 
 main {
 	font-family: Gantari, sans-serif;
-  color: $text-primary;
+  color: text-colors.$text-primary;
 }
 
 h1 {
@@ -67,17 +62,17 @@ h4 {
 }
 
 .accent-text {
-  color: $text-accent;
+  color: text-colors.$text-accent;
 }
 
 .muted-text {
-  color: $text-muted;
+  color: text-colors.$text-muted;
 }
 
 .link {
   @include font-mixins.font-size(font-mixins.$p-sizes);
   text-decoration: none;
-  color: $text-accent;
+  color: text-colors.$text-accent;
 }
 
 .link:hover {
@@ -85,7 +80,7 @@ h4 {
 }
 
 .link.unstyled {
-  color: $text-primary;
+  color: text-colors.$text-primary;
 }
 
 .link.unstyled:hover {
