@@ -1,9 +1,14 @@
 <script>
+	import HomeLink from "../../lib/components/HomeLink.svelte";
+
   export let data;
   const { postData } = data;
 </script>
 
 <header>
+  <nav>
+    <HomeLink />
+  </nav>
   <h2>Blogust</h2>
 </header>
 <div class="post-grid">
@@ -11,7 +16,7 @@
     <article class="blog-post-preview">
       <a href={post.path} class="unstyled link" >
         <div class="post-link">
-          <h2 class="link-highlight">{post.metadata?.title}</h2>
+          <h2 class="blog-title link-highlight">{post.metadata?.title}</h2>
           <p class="date muted-text">{post.metadata?.date ?? "‎"}</p>
           <p>{post.metadata?.description}</p>
         </div>
@@ -43,6 +48,12 @@
 		background-size: cover;
 	}
 
+  nav {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+
   .post-grid {
     position: relative;
     display: flex column;
@@ -57,8 +68,15 @@
     .date {
       font-style: italic;
     }
+  }
 
-    
+  .blog-title {
+    font-size: 24px;
+    font-style: bold;
+
+    @media screen and (min-width: 760px) {
+      font-style: 32px;
+    }
   }
 
   .post-link {
