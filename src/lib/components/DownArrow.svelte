@@ -7,7 +7,7 @@
 </script>
 
 {#if ready}
-	<div class="down-arrow-container" in:fade={{ delay: fadeIn ? 2500 : 0, duration: fadeIn ? 500 : 0 }}>
+	<div class="down-arrow-container" in:fade={{ delay: fadeIn ? 2100 : 0, duration: fadeIn ? 500 : 0 }}>
 		<a href={`#${scrollTo}`}>
 			<span class="down-arrow material-symbols-outlined"> expand_more </span>
 		</a>

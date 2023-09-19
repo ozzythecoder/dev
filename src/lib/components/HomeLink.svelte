@@ -18,6 +18,7 @@
 		cursor: pointer;
 		user-select: none;
 		color: white;
+    padding: 0.3rem;
 		text-decoration: none;
 		transition: all 0.5s;
 		transform: scale(1);
