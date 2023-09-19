@@ -17,6 +17,10 @@
       url: '/#portfolio'
     },
     {
+      name: 'Blog',
+      url: '/blog'
+    },
+    {
       name: 'Values',
       url: '/#values',
     },
@@ -44,7 +48,7 @@
 	<ul>
 		{#if ready}
 			{#each links as link, idx}
-				<li in:fly={{ delay: 500 + idx * 500, duration: 800, x: 500, easing: circOut }}>
+				<li in:fly={{ delay: 300 + idx * 300, duration: 800, x: 500, easing: circOut }}>
 					<a class="link" href={link.url}>{@html link.name}</a>
 				</li>
 			{/each}
@@ -54,8 +58,8 @@
 	</ul>
   <ul>
     {#if ready}
-      {#each icons as icon, idx}
-        <li in:fade={{ delay: 2500, duration: 500 }} >
+      {#each icons as icon}
+        <li class="social-icon" in:fade={{ delay: 300 + links.length * 300, duration: 500 }} >
           <a href={icon.url} target="_blank" rel="noreferrer">
             <img src={icon.image} style="height: 2rem;" alt={icon.name} />
           </a>
@@ -71,7 +75,7 @@
 
 	ul {
 		display: flex;
-		flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
     padding-left: 0;
     margin: 1rem;
@@ -81,4 +85,20 @@
 		list-style: none;
 		padding: 0 10px;
 	}
+
+  .social-icon {
+    background: transparent;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 0.5s all;
+
+    &:hover {
+      transform: scale(1.3);
+      background: rgb(255, 255, 255, 0.2);
+    }
+  }
 </style>

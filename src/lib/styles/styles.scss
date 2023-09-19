@@ -4,58 +4,18 @@
 // MAP
 @use 'sass:map';
 
+// RESPONSIVE FONT SIZING
+@use './font-mixins';
+
+// COLOR PALETTE
+@use './text-colors';
+
 // FONTS
 @import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&family=Gantari:wght@200;400;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
-
 // ==========================================================================
-// COLOR PALETTE
-
-$text-primary: #f5f5f5;
-$text-accent: #ffbc7c;
-
-// ==========================================================================
-// RESPONSIVE FONT SIZES
-
-$title-font-sizes: (
-  null: 48px,
-  480px: 54px,
-  760px: 66px,
-  1024px: 76px,
-  1440px: 96px
-);
-
-$h2-sizes: (
-  null: 38px,
-  480px: 44px,
-  760px: 50px,
-  1024px: 56px,
-  1440px: 60px
-);
-
-$p-sizes: (
-  null: 16px,
-  480px: 17px,
-  760px: 18px,
-  1440px: 20px
-);
-
-@mixin font-size($fs-map) {
-  @each $fs-breakpoint, $fs-font-size in $fs-map {
-    @if $fs-breakpoint == null {
-      font-size: $fs-font-size;
-    }
-    @else {
-      @media screen and (min-width: $fs-breakpoint) {
-        font-size: $fs-font-size;
-      }
-    }
-  }
-}
-
-// ==========================================================================
-// GLOBAL STYLES
+// GLOBALS
 
 html {
   scroll-behavior: smooth;
@@ -67,23 +27,24 @@ body, h1, h2, p {
   box-sizing: border-box;
 }
 
+p, ul, li, code {
+  @include font-mixins.font-size(font-mixins.$p-sizes);
+} 
+
 body {
   background-color: rgb(0, 0, 60);
-}
-
-main {
 	font-family: Gantari, sans-serif;
-  color: $text-primary;
+  color: text-colors.$text-primary;
 }
 
 h1 {
   font-weight: 200;
-  @include font-size($title-font-sizes);
+  @include font-mixins.font-size(font-mixins.$title-font-sizes);
 }
 
 h2 {
   font-weight: 200;
-  @include font-size($h2-sizes)
+  @include font-mixins.font-size(font-mixins.$h2-sizes)
 }
 
 h3 {
@@ -98,15 +59,35 @@ h4 {
 }
 
 .body-text {
-  @include font-size($p-sizes)
+  @include font-mixins.font-size(font-mixins.$p-sizes)
+}
+
+.accent-text {
+  color: text-colors.$text-accent;
+}
+
+.muted-text {
+  color: text-colors.$text-muted;
 }
 
 .link {
-  @include font-size($p-sizes);
+  @include font-mixins.font-size(font-mixins.$p-sizes);
   text-decoration: none;
-  color: $text-accent;
+  color: text-colors.$text-accent;
+
+  &:hover {
+    text-decoration: underline;
+    .link-highlight {
+      text-decoration: underline 2px;
+      text-underline-offset: 0.3rem;
+    }
+  }
+
+  &.unstyled {
+    color: text-colors.$text-primary;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
-.link:hover {
-  text-decoration: underline;
-}

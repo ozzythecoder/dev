@@ -20,8 +20,6 @@
 
 {#key data.currentRoute}
   <div in:fade={{ duration: 400 }} >
-    <main>
-      <slot />
-    </main>
+    <slot />
   </div>
 {/key}
