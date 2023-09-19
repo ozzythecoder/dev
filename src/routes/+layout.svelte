@@ -19,7 +19,7 @@
 </svelte:head>
 
 {#key data.currentRoute}
-  <div in:fade={{ duration: 400 }} >
+  <div in:fade={{ duration: 400 }} out:fade={{ duration: 100 }} >
     <slot />
   </div>
 {/key}
