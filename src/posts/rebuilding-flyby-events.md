@@ -2,6 +2,7 @@
 title: Rebuilding FlyBy Events
 date: Sep 18, 2023
 description: Identifying potential points for improvement for rebuilding my solo project from Prime Digital Academy.
+layout: '../routes/blog/[slug]/+layout.svelte'
 cssclasses: 
 tags:
 ---
@@ -13,14 +14,6 @@ My solo project at Prime Digital Academy was one of the hardest things I've ever
 
 My solo project came pre-loaded with Passport.js middleware and a basic username/password login strategy. Since then I've learned that passwords are not the strongest option for auth, and I also didn't encrypt emails or phone numbers before storing them (!!!!!).
 
-```jsx
-export default function YIKES() {
-  return (
-    <h1>CRINGE!</h1>
-  )
-}
-```
-
 I've since become a much stronger believer in 1) OAuth, and 2) outsourcing auth to a third party. Security being its own vast discipline, I want to keep my focus on building the interface and data logic of the application. It's impossible to understand everything, after all. This is why I'll be using Clerk for user authentication in FlyBy 2.0.
 
 ### ✦ TypeScript
@@ -29,7 +22,7 @@ I'm a TS convert now, plain and simple. The problems that I had during FlyBy's d
 
 My project starter repo was bootstrapped in `create-react-app`, which has since been deprecated and removed from the React docs. We also used an older, more verbose version of Redux and Redux Sagas, for state management and data fetching respectively. Instead, I'll be rebuilding FlyBy in Next.js, my chosen full-stack React framework, and relying on core React features for state management, such as the Context API.
 
-### ✦ Presentation & UX (loading states, reliance on MUI)
+### ✦ Presentation & UX 
 One of my stated goals for FlyBy was a frictionless user experience. At the time, I thought this just meant building Facebook Events without the cruft, so I focused on what *not* to add. But I've learned that it is just as important to give clear feedback to the user. OG FlyBy could have felt a lot better with just something as simple as a loading spinner.
 
 I also relied heavily on Google's Material UI component library, which was quick to set up and easy to use. But after using tools like Tailwind and Sass, I find MUI's prefab components too opinionated, and the ceiling for design flexibility too low. I'll be using Tailwind for FlyBy 2.0, with some light assistance from shadcn-ui, a component library built on the ARIA-compliant Radix UI primitives. There are some wheels that don't need reinventing.
