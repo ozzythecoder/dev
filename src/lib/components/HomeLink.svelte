@@ -10,7 +10,7 @@
     display: grid;
     place-items: center;
 		margin: 0 auto;
-    padding: 1rem;
+    padding: 0;
 		height: 2rem;
 	}
 

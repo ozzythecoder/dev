@@ -32,7 +32,7 @@
     position: relative;
     margin: 2rem auto;
     text-align: center;
-    max-width: 1000px;
+    max-width: 800px;
   }
 
   header::after {
@@ -45,16 +45,14 @@
 		z-index: -1;
 
 		background: url('/CurveLine.svg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
 		background-size: cover;
 	}
 
   nav {
     position: absolute;
-    top: 5%;
-    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 7%;
   }
 
   .post-grid {
