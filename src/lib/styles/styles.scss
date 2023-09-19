@@ -27,11 +27,12 @@ body, h1, h2, p {
   box-sizing: border-box;
 }
 
+p, ul, li, code {
+  @include font-mixins.font-size(font-mixins.$p-sizes);
+} 
+
 body {
   background-color: rgb(0, 0, 60);
-}
-
-main {
 	font-family: Gantari, sans-serif;
   color: text-colors.$text-primary;
 }
@@ -73,21 +74,20 @@ h4 {
   @include font-mixins.font-size(font-mixins.$p-sizes);
   text-decoration: none;
   color: text-colors.$text-accent;
-}
 
-.link:hover {
-  text-decoration: underline;
-}
+  &:hover {
+    text-decoration: underline;
+    .link-highlight {
+      text-decoration: underline 2px;
+      text-underline-offset: 0.3rem;
+    }
+  }
 
-.link.unstyled {
-  color: text-colors.$text-primary;
-}
-
-.link.unstyled:hover {
-  text-decoration: none;
-
-  .link-highlight {
-    text-decoration: underline 2px;
-    text-underline-offset: 0.5rem;
+  &.unstyled {
+    color: text-colors.$text-primary;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
+
