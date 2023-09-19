@@ -9,12 +9,12 @@
   <nav>
     <HomeLink />
   </nav>
-  <h2>Blogust</h2>
+  <h2>Blog</h2>
 </header>
 <div class="post-grid">
   {#each postData as post}
     <article class="blog-post-preview">
-      <a href={post.path} class="unstyled link" >
+      <a href={post.path} class="link unstyled" >
         <div class="post-link">
           <h2 class="blog-title link-highlight">{post.metadata?.title}</h2>
           <p class="date muted-text">{post.metadata?.date ?? "‎"}</p>
@@ -26,6 +26,7 @@
 </div>
 
 <style lang="scss">
+  @use '../../lib/styles/text-colors';
 
   header {
     position: relative;
@@ -60,7 +61,7 @@
     position: relative;
     display: flex column;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 800px;
   }
 
   .blog-post-preview {
@@ -86,7 +87,15 @@
     border-radius: 10px;
     margin: 5px;
     padding: 20px;
-    
+
+    p {
+      margin: 0.3rem 0;
+    }
+
+    &:hover {
+      background-color: rgb(27, 27, 60);
+      border-color: text-colors.$text-accent;
+    }
     ::after {
       content: '';
       position: absolute;
@@ -99,4 +108,5 @@
     }
   }
 
+  
 </style>
