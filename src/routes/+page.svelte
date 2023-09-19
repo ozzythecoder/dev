@@ -158,7 +158,7 @@
 				<h3>Event Technical Specialist</h3>
 				<h4>AVEX Audiovisual, Inc.</h4>
 				<BodyText spotlight>
-					<p class="callout">March - August 2022</p>
+					<p class="callout">March 2022 - Present</p>
 					<ul>
 						<li>Facilitated corporate events at hotels across the twin cities area</li>
 						<li>Calculated technical needs and constraints and made necessary adjustments</li>
