@@ -49,7 +49,7 @@
 		{#if ready}
 			{#each links as link, idx}
 				<li in:fly={{ delay: 300 + idx * 300, duration: 800, x: 500, easing: circOut }}>
-					<a class="link" href={link.url}>{@html link.name}</a>
+					<a class="link" prefetch href={link.url}>{@html link.name}</a>
 				</li>
 			{/each}
 		{:else}

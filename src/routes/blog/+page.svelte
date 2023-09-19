@@ -12,17 +12,22 @@
   <h1>Blog</h1>
 </header>
 <div class="post-grid">
-  {#each postData as post}
-    <article class="blog-post-preview">
-      <a href={post.path} class="link unstyled" >
-        <div class="post-link">
-          <h2 class="blog-title link-highlight">{post.metadata?.title}</h2>
-          <p class="date muted-text">{post.metadata?.date ?? "‎"}</p>
-          <p>{post.metadata?.description}</p>
-        </div>
-      </a>
-    </article>
-  {/each}
+  {#await data}
+      <h3>...</h3>
+    {:then}
+
+    {#each postData as post}
+      <article class="blog-post-preview">
+        <a href={post.path} class="link unstyled" >
+          <div class="post-link">
+            <h2 class="blog-title link-highlight">{post.metadata?.title}</h2>
+            <p class="date muted-text">{post.metadata?.date ?? "‎"}</p>
+            <p>{post.metadata?.description}</p>
+          </div>
+        </a>
+      </article>
+    {/each}
+  {/await}
 </div>
 
 <style lang="scss">
