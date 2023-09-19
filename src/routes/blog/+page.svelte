@@ -28,8 +28,10 @@
 <style lang="scss">
 
   header {
+    position: relative;
     margin: 2rem auto;
     text-align: center;
+    max-width: 1000px;
   }
 
   header::after {

@@ -12,7 +12,7 @@
     <h2>{metadata.title}</h2>
     <p class="muted-date-text">{metadata.date ? `Posted ${metadata.date}` : ""}</p>
   </header>
-    <hr />
+  <hr class="initial-divider" />
   <article>
     <Content />
   </article>
@@ -39,6 +39,7 @@
       transform: translateX(0);
     }
   }
+
   .blog-header {
     @media screen and (min-width: 760px) {
       margin: 1rem;
@@ -48,6 +49,21 @@
   .muted-date-text {
     color: text-colors.$text-muted;
     font-style: italic;
+  }
+
+  article {
+    @media screen and (min-width: 760px) {
+      padding-top: 0.3rem;
+    }
+  }
+
+  .initial-divider {
+    border: 1px solid rgb(90, 90, 90);
+    margin: 1.3rem auto 0.3rem;
+
+    @media screen and (min-width: 760px) {
+      margin: 2.3rem auto 1.3rem;
+    }
   }
 
   :global(h1) {
