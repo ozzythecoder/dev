@@ -9,7 +9,7 @@
   <nav>
     <HomeLink />
   </nav>
-  <h2>Blog</h2>
+  <h1>Blog</h1>
 </header>
 <div class="post-grid">
   {#each postData as post}
@@ -27,12 +27,17 @@
 
 <style lang="scss">
   @use '../../lib/styles/text-colors';
-
+  @use '../../lib/styles/font-mixins';
+  
   header {
     position: relative;
     margin: 2rem auto;
     text-align: center;
     max-width: 800px;
+
+    h1 {
+      @include font-mixins.font-size(font-mixins.$h2-sizes);
+    }
   }
 
   header::after {

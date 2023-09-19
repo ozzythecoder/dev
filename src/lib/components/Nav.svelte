@@ -75,7 +75,7 @@
 
 	ul {
 		display: flex;
-		flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
     padding-left: 0;
     margin: 1rem;
@@ -95,9 +95,10 @@
     border-radius: 10px;
     transform: scale(1);
     transition: 0.5s all;
-  }
-  .social-icon:hover {
-    transform: scale(1.3);
-    background: rgb(255, 255, 255, 0.2);
+
+    &:hover {
+      transform: scale(1.3);
+      background: rgb(255, 255, 255, 0.2);
+    }
   }
 </style>
