@@ -70,7 +70,7 @@
 					{#if intersecting}
 						{#each bulletPoints as bullet, idx}
 							<li
-								transition:fly={{ delay: 300 + idx * 300, duration: 800, x: 500, easing: circOut }}
+								in:fly={{ delay: 300 + idx * 300, duration: 800, x: 500, easing: circOut }}
 							>
 								{@html bullet}
 							</li>
