@@ -4,30 +4,37 @@
   import BackArrow from '../../../lib/components/BackArrow.svelte';
 </script>
 
-<main>
-  <nav>
-    <BackArrow href={"/blog/"} />
-  </nav>
-  <header class="blog-header">
+<div id="container">
+  <header>
+    <nav>
+      <BackArrow href={"/blog/"} />
+    </nav>
     <h2>{metadata.title}</h2>
     <p class="muted-date-text">{metadata.date ? `Posted ${metadata.date}` : ""}</p>
+    <hr class="initial-divider" />
   </header>
-  <hr class="initial-divider" />
-  <article>
-    <Content />
-  </article>
-  <BackArrow href={"/blog/"} />
-</main>
+  <main>
+    <article>
+      <Content />
+    </article>
+    <BackArrow href={"/blog/"} />
+  </main>
+</div>
 
 <style lang="scss">
   @use '../../../lib/styles/text-colors';
   @use "../../../lib/styles/font-mixins";
 
-  main {
-    margin: 4rem 7%;
+  #container {
+    position: relative;
+    margin: 0rem auto;
     max-width: 760px;
+  }
+
+  main {
+    margin: 2rem 7% 4rem;
     @media screen and (min-width: 760px) {
-      margin: 4rem auto;
+      margin: 1rem auto 4rem;
     }
   }
 
@@ -37,15 +44,20 @@
     left: 50%;
     transform: translateX(-50%);
 
-    @media screen and (min-width: 760px) {
-      left: 15%;
-      transform: translateX(0);
+    @media screen and (min-width: 1000px) {
+      top: 50%;
+      left: -80px;
+      transform: translateX(0) translateY(-50%);
     }
   }
 
-  .blog-header {
-    @media screen and (min-width: 760px) {
-      margin: 1rem;
+  header {
+    max-width: 760px;
+    position: relative;
+    padding-top: 3rem;
+    margin: 0 7%;
+    @media screen and (min-width: 1000px) {
+      margin: 0 auto;
     }
   }
 
@@ -98,6 +110,7 @@
 
   .initial-divider {
     border: 1px solid rgb(90, 90, 90);
+    max-width: 90%;
     margin: 1.3rem auto 0.3rem;
 
     @media screen and (min-width: 760px) {
