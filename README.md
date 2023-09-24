@@ -6,4 +6,4 @@ My official portfolio website and technical blog.
 - Svelte & SvelteKit
 - SCSS
 - Obsidian for markdown composition
-- Markdown processing by MDsveX
+- Markdown processing by [MDsveX](https://github.com/pngwn/MDsveX)
