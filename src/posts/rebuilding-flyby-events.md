@@ -2,7 +2,7 @@
 title: Rebuilding FlyBy Events
 date: Sep 18, 2023
 description: Identifying potential points for improvement for rebuilding my solo project from Prime Digital Academy.
-layout: '../routes/blog/[slug]/+layout.svelte'
+layout: ../routes/blog/[slug]/+layout.svelte
 cssclasses: 
 tags:
 ---
