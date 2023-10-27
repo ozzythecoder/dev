@@ -108,6 +108,10 @@
 			margin: 1.3rem 0;
 		}
 
+		:global(h4) {
+			text-align: left;
+		}
+
 		:global(pre) {
 			padding: 1rem 1.5rem;
 			background: rgb(37, 37, 37);
