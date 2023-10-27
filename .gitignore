@@ -12,3 +12,4 @@ vite.config.ts.timestamp-*
 
 /src/lib/components/InView.svelte
 src/posts/.obsidian
+src/posts/drafts/
