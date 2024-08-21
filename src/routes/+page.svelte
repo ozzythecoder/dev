@@ -20,7 +20,6 @@
 	let headerNode;
 	let skillsNode;
 
-
 	onMount(() => { ready = true });
 </script>
 
@@ -47,7 +46,6 @@
 <section>
 	<Article scrollID="intro">
 		<h2>Who am I?</h2>
-
 
 		<IntersectionObserver let:intersecting once element={headerNode}>
 			<div bind:this={headerNode}>
@@ -347,13 +345,16 @@
 
 		<!-- TS RECIPE BOOK -->
 		<Spotlight direction="row">
-      <div slot="picture">
-        <img src="./recipebook-screenshot1.png" class="img-1" alt="A screenshot of the add recipe page in the TS Recipe Book app." />
-      </div>
+			<div slot="picture">
+				<img
+					src="./recipebook-screenshot1.png"
+					class="img-1"
+					alt="A screenshot of the add recipe page in the TS Recipe Book app."
+				/>
+			</div>
 			<div slot="content">
 				<h3>TypeScript Recipe Book</h3>
 				<BodyText spotlight>
-					<p class="callout">Currently in development</p>
 					<div class="center">
 						<a class="link" href="https://github.com/ozzythecoder/ts-recipe-book"> GitHub </a>
 					</div>
@@ -362,7 +363,10 @@
 
 					<ul>
 						<li>Building with TypeScript, Next.js 13.4, Tailwind CSS, Prisma, and PostgreSQL</li>
-            <li>Uses React Hook Form for complex form handling, and Shadcn/ui for accessible styled components</li>
+						<li>
+							Uses React Hook Form for complex form handling, and Shadcn/ui for accessible styled
+							components
+						</li>
 						<li>My first exploration of many of these technologies</li>
 					</ul>
 				</BodyText>
@@ -376,7 +380,7 @@
 			<div class="center">
 				<a class="link" href="/">GitHub</a>
 			</div>
-			<p class="center">Built with Svelte, SvelteKit, and SCSS, and deployed with Vercel.</p>
+			<p class="center">Built with Svelte and SCSS, and deployed with Vercel.</p>
 		</BodyText>
 
 		<DownArrow scrollTo="values" />
@@ -439,9 +443,9 @@
 		z-index: -1;
 
 		background: url('/CurveLine.svg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
 		background-size: cover;
 	}
 
@@ -467,10 +471,9 @@
 	}
 
 	@media screen and (max-width: 600px) {
-
-    .center-hero::after {
-      background-attachment: fixed;
-    }
+		.center-hero::after {
+			background-attachment: fixed;
+		}
 
 		.flex-list {
 			flex-direction: column;

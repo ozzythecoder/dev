@@ -1,25 +1,23 @@
 <script>
-  import '../lib/styles/styles.scss';
-	import { fade } from "svelte/transition";
-  import { onMount } from "svelte";
+	import '../lib/styles/styles.scss';
+	import { fade } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
-  let ready = false;
+	let ready = false;
 
-  onMount(() => {
-    ready = true;
-  })
+	onMount(() => {
+		ready = true;
+	});
 
-  export let data;
+	export let data;
 </script>
 
 <svelte:head>
-  <title>
-    August McAllister
-  </title>
+	<title>August McAllister</title>
 </svelte:head>
 
 {#key data.currentRoute}
-  <div in:fade={{ duration: 400 }} out:fade={{ duration: 100 }} >
-    <slot />
-  </div>
+	<div in:fade={{ duration: 400 }} out:fade={{ duration: 100 }}>
+		<slot />
+	</div>
 {/key}
