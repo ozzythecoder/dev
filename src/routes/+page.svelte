@@ -70,7 +70,7 @@
 			through her HTML books and understanding enough to build a little "message board" on Yahoo
 			GeoCities. I've played video games for most of my life, and I've made music using a computer
 			since 2010, and through it all, I've had countless moments where I've interacted with a piece
-			of software and thought "how does that <i>work</i>?"
+			of software and thought "how does that <em>work</em>?"
 		</BodyText>
 		<BodyText>
 			When I was sixteen, I moved from my hometown of Anchorage, Alaska to my mother's hometown of
@@ -83,7 +83,7 @@
 		<BodyText>
 			Remaining curious and adaptable, I found fulfillment in the process of software development.
 			Being able to look at a problem, identify its smaller issues, craft a set of detailed
-			solutions, and then iterate over those solutions to polish them into a cohesive and beautiful
+			solutions, and then iterate over those solutions to craft a beautiful
 			user experience… It still feels a bit like magic.
 		</BodyText>
 		<DownArrow scrollTo="skills" />
