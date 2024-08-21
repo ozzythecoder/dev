@@ -123,6 +123,34 @@
 	<Article scrollID="experience">
 		<h2>Experience</h2>
 
+		<!-- UNHINGED STUDIOS -->
+		<Spotlight direction="row-reverse">
+			<img slot="picture" src="#" alt="Dev Hell key art" />
+			<div slot="content">
+				<h3>Dev Hell - Unhinged Studios</h3>
+				<h4>Composer & Music Director</h4>
+				<BodyText spotlight>
+					<p class="callout">April 2023 - Present</p>
+					<ul>
+						<li>
+							Composing, arranging, and mixing original soundtrack for game encounters and
+							promotional material
+						</li>
+						<li>
+							Consulting on sound design, selection, and timing to ensure a satisfying gameplay
+							experience
+						</li>
+						<li>
+							Collaborating with colleagues across disciplines to accept feedback and iterate over
+							ideas
+						</li>
+					</ul>
+				</BodyText>
+			</div>
+		</Spotlight>
+
+		<Divider />
+
 		<!-- PRIME DIGITAL ACADEMY -->
 		<Spotlight>
 			<img
