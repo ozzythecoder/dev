@@ -195,15 +195,15 @@
 				<BodyText spotlight>
 					<p class="callout">March 2022 - Present</p>
 					<ul>
-						<li>Facilitated corporate events at hotels across the twin cities area</li>
-						<li>Calculated technical needs and constraints and made necessary adjustments</li>
-						<li>Built and operated audio, lighting, and projection systems</li>
+						<li>Facilitating corporate events at hotels across the twin cities area</li>
+						<li>Calculating technical needs and constraints and made necessary adjustments</li>
+						<li>Buiding and operating audio, lighting, and projection systems</li>
 						<li>
-							Adapted to changes throughout events and collaborated with others to eliminate
+							Adapting to changes throughout events and collaborating with others to eliminate
 							emergent technical issues
 						</li>
 						<li>
-							Communicated with clients and keynote speakers to ensure a punctual and professional
+							Communicating with clients and keynote speakers to ensure a punctual and professional
 							event
 						</li>
 					</ul>
@@ -230,15 +230,18 @@
 					<p class="callout">2018 - Present</p>
 					<ul>
 						<li>
-							Work directly with other musicians on composition & arrangement, audio engineering,
+							Working directly with other musicians on composition & arrangement, audio engineering,
 							production, and post-production
 						</li>
-						<li>Organize, promote, and execute live events</li>
+						<li>Organizing, promoting, and executing live events</li>
 						<li>
-							Communicate with venues to negotiate set times, riders, artist payment, and other
+							Communicating with venues to negotiate set times, riders, artist payment, and other
 							event details
 						</li>
-						<li>Perform live on bass, piano, synthesizer, and as background & solo vocalist</li>
+						<li>
+							Performing live on electric bass, piano, synthesizer, and as background & solo
+							vocalist
+						</li>
 					</ul>
 				</BodyText>
 			</div>
