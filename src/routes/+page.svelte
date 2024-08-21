@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	import { circOut } from 'svelte/easing';
 
 	import IntersectionObserver from 'svelte-intersection-observer';
@@ -14,16 +14,14 @@
 	import Spotlight from '../lib/components/Spotlight.svelte';
 
     import { introBullets, skillBullets } from '../lib/constants/bullets'
+
 	let ready = false;
 
-	let element;
-	let intersecting;
+	let headerNode;
+	let skillsNode;
 
 
-
-	onMount(() => {
-		ready = true;
-	});
+	onMount(() => { ready = true });
 </script>
 
 <!-- 
@@ -50,16 +48,13 @@
 	<Article scrollID="intro">
 		<h2>Who am I?</h2>
 
-		<BodyText>The short version:</BodyText>
 
-		<IntersectionObserver bind:intersecting once {element}>
-			<div bind:this={element}>
+		<IntersectionObserver let:intersecting once element={headerNode}>
+			<div bind:this={headerNode}>
 				<ul class="body-text flex-list" id="keywords">
 					{#if intersecting}
-						{#each bulletPoints as bullet, idx}
-							<li
-								in:fly={{ delay: 300 + idx * 300, duration: 800, x: 500, easing: circOut }}
-							>
+						{#each introBullets as bullet, idx}
+							<li in:fly={{ delay: 300 + idx * 300, duration: 800, x: 500, easing: circOut }}>
 								{@html bullet}
 							</li>
 						{/each}
@@ -93,7 +88,31 @@
 			solutions, and then iterate over those solutions to polish them into a cohesive and beautiful
 			user experience… It still feels a bit like magic.
 		</BodyText>
+		<DownArrow scrollTo="skills" />
+	</Article>
 
+	<!-- 
+    **********************************
+    SKILLS
+   -->
+
+	<Article scrollID="skills">
+		<h2>Skills</h2>
+		<IntersectionObserver element={skillsNode} let:intersecting once>
+			<div bind:this={skillsNode}>
+				<ul class="flex-list">
+					{#if intersecting}
+						{#each skillBullets as skill, idx}
+							<li in:fade={{ delay: idx * 100, duration: 200 }}>
+								<img src={skill.url} alt={skill.name} />
+							</li>
+						{/each}
+					{:else}
+						<li />
+					{/if}
+				</ul>
+			</div>
+		</IntersectionObserver>
 		<DownArrow scrollTo="experience" />
 	</Article>
 
