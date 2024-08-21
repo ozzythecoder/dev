@@ -13,25 +13,13 @@
 	import Divider from '../lib/components/Divider.svelte';
 	import Spotlight from '../lib/components/Spotlight.svelte';
 
+    import { introBullets, skillBullets } from '../lib/constants/bullets'
 	let ready = false;
 
 	let element;
 	let intersecting;
 
-	let princeSymbolString = `<img style="height:1.2rem; margin-bottom:-0.2rem" src="./icons/Prince-Love-Symbol.svg" />`;
-	let enbyFlagString = `<img style="height:0.8rem;" src="./icons/nonbinary-flag.png" alt="non-binary pride flag" />`;
 
-	const bulletPoints = [
-		`📌${princeSymbolString} Minneapolis, Minnesota`,
-		'🇸🇪 Swedish-American',
-		`${enbyFlagString} non-binary (they/them)`,
-		'💻 full-stack software developer',
-		'🎹 musician',
-		'🎮 video game enjoyer',
-		'💡 extrovert',
-		'🛌 homebody',
-		'♋️ cancer sun'
-	];
 
 	onMount(() => {
 		ready = true;
