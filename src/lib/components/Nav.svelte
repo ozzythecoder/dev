@@ -9,6 +9,10 @@
       url: '/#intro'
     },
     {
+        name: 'Skills',
+        url: '/#skills'
+    },
+    {
       name: 'Experience',
       url: '/#experience'
     },
